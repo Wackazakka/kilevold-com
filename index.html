@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lars Kilevold</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #2C2C2A;
+      color: #F1EFE8;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Header ── */
+    header {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 64px 24px 48px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .logo-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #F1EFE8;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #F1EFE8;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #9ca3a0;
+      font-weight: 400;
+    }
+
+    .tagline {
+      margin-top: 20px;
+      font-size: 1.05rem;
+      color: #c4c1b8;
+      max-width: 480px;
+      line-height: 1.6;
+    }
+
+    /* ── Grid ── */
+    .grid-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 560px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Card ── */
+    .card {
+      background-color: #38382E;
+      border: 1px solid #4a4a40;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+
+    .card:hover {
+      border-color: #378ADD55;
+      transform: translateY(-2px);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .card-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #F1EFE8;
+      letter-spacing: -0.01em;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 10px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .badge-live {
+      background-color: rgba(29, 158, 117, 0.18);
+      color: #1D9E75;
+      border: 1px solid rgba(29, 158, 117, 0.35);
+    }
+
+    .badge-beta {
+      background-color: rgba(24, 95, 165, 0.18);
+      color: #378ADD;
+      border: 1px solid rgba(55, 138, 221, 0.35);
+    }
+
+    .badge-dev {
+      background-color: rgba(156, 163, 160, 0.12);
+      color: #9ca3a0;
+      border: 1px solid rgba(156, 163, 160, 0.25);
+    }
+
+    .card-desc {
+      font-size: 0.875rem;
+      color: #a0a09a;
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #378ADD;
+      margin-top: 4px;
+      transition: color 0.15s;
+    }
+
+    .card-link:hover { color: #5fa8f0; }
+
+    .card-link svg {
+      flex-shrink: 0;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid #3d3d35;
+      padding: 24px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <polygon
+          points="12,2.5 20.8,7.75 20.8,16.25 12,21.5 3.2,16.25 3.2,7.75"
+          stroke="#D3D1C7"
+          stroke-width="1"
+          stroke-linejoin="round"
+          fill="none"
+        />
+      </svg>
+      <span class="logo-text">kilevold.com</span>
+    </div>
+    <h1>Lars Kilevold</h1>
+    <p class="subtitle">Founder, Abrakadabra Communication AS</p>
+    <p class="tagline">Building AI-native products across media, finance, and services.</p>
+  </header>
+
+  <section class="grid-section">
+    <p class="section-label">Products</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-name">AlgoMaster</span>
+          <span class="badge badge-beta">Beta</span>
+        </div>
+        <p class="card-desc">Algorithmic trading bot connected to Interactive Brokers. Automated strategies for equities and derivatives.</p>
+        <a class="card-link" href="https://algomaster.ai" target="_blank" rel="noopener">
+          algomaster.ai
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-name">SinglePicker</span>
+          <span class="badge badge-live">Live</span>
+        </div>
+        <p class="card-desc">AI-powered tool helping artists decide which track to release as their next single based on data and context.</p>
+        <a class="card-link" href="https://singlepicker.com" target="_blank" rel="noopener">
+          singlepicker.com
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-name">BilDeal</span>
+          <span class="badge badge-live">Live</span>
+        </div>
+        <p class="card-desc">Used car deal analyzer. Evaluates listings against market data to tell you if you're getting a fair price.</p>
+        <a class="card-link" href="https://bildeal.ai" target="_blank" rel="noopener">
+          bildeal.ai
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-name">CenterForge</span>
+          <span class="badge badge-beta">Beta</span>
+        </div>
+        <p class="card-desc">AI content platform that generates professional ad material — video and copy — across all social media formats.</p>
+        <a class="card-link" href="https://centerforge.ai" target="_blank" rel="noopener">
+          centerforge.ai
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-name">SummonIt</span>
+          <span class="badge badge-dev">In development</span>
+        </div>
+        <p class="card-desc">AI software factory. Describe what you need — SummonIt scopes, builds, and delivers the product.</p>
+        <a class="card-link" href="https://summonit.ai" target="_blank" rel="noopener">
+          summonit.ai
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-name">Reforhandle</span>
+          <span class="badge badge-live">Live</span>
+        </div>
+        <p class="card-desc">Subscription renegotiation service. Gets you better terms on recurring bills without the hassle of doing it yourself.</p>
+        <a class="card-link" href="https://reforhandle.no" target="_blank" rel="noopener">
+          reforhandle.no
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-name">Dr. Hanni</span>
+          <span class="badge badge-dev">In development</span>
+        </div>
+        <p class="card-desc">AI knowledge base and digital clone. Captures expertise, answers questions, and represents knowledge at scale.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    Lars Kilevold &mdash; Abrakadabra Communication AS &mdash; <a href="mailto:lars@kilevold.com" style="color:#378ADD;">lars@kilevold.com</a>
+  </footer>
+
+</body>
+</html>
