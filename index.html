@@ -100,6 +100,15 @@
   .about p{margin:0; font-size:17.5px; color:var(--ink); line-height:1.6; max-width:780px; text-wrap:pretty;}
   @media(max-width:640px){ .about{grid-template-columns:1fr; gap:14px; padding:26px;} }
 
+  /* ---------- How we work ---------- */
+  .howgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  @media(max-width:940px){ .howgrid{grid-template-columns:1fr;} }
+  .step{position:relative; background:var(--panel); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-card); padding:26px 26px 28px; overflow:hidden; backdrop-filter:blur(14px); box-shadow:0 14px 40px -20px rgba(0,0,0,.75);}
+  .step::before{content:""; position:absolute; top:0; left:24px; right:24px; height:1px; background:linear-gradient(90deg, transparent, var(--cyan), transparent); opacity:.5;}
+  .step-n{font-family:var(--mono); font-weight:600; font-size:14px; letter-spacing:.04em; background:linear-gradient(104deg, var(--green), var(--cyan) 55%, var(--violet)); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:14px;}
+  .step h3{font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:20px; letter-spacing:-0.02em; margin:0 0 9px; color:var(--ink);}
+  .step p{margin:0; color:var(--ink-soft); font-size:15px; line-height:1.55; text-wrap:pretty;}
+
   /* ---------- Section head + filter ---------- */
   .sec-head{display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:18px; margin:78px 0 24px;}
   .sec-head .label{font-family:var(--mono); font-size:13px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint);}
@@ -145,6 +154,7 @@
   .card .link svg{width:13px; height:13px; stroke:currentColor; stroke-width:2; fill:none; flex:none;}
   .card .link .url{overflow-wrap:anywhere; border-bottom:1px solid transparent; transition:border-color .18s ease;}
   .card .link:hover .url{border-bottom-color:currentColor;}
+  .card .link-static{color:var(--ink-faint); cursor:default;}
 
   /* ---------- Contact CTA ---------- */
   .cta{margin:96px 0 0; padding:60px 52px; border-radius:28px; position:relative; overflow:hidden; border:1px solid var(--line); background:linear-gradient(135deg, rgba(94,242,168,.10), rgba(99,230,255,.06) 45%, rgba(167,139,250,.12));}
@@ -219,7 +229,7 @@
         <button data-lang="en" class="active">EN</button>
         <button data-lang="no">NO</button>
       </div>
-      <a class="nav-cta" href="mailto:kilevold@gmail.com">
+      <a class="nav-cta" href="mailto:hello@norditech.no">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
         <span data-i18n="nav_contact">Contact</span>
       </a>
@@ -229,7 +239,7 @@
 
 <main id="top">
   <section class="hero wrap">
-    <span class="eyebrow"><span class="pulse"></span><span data-i18n="eyebrow">AI venture studio · London · New York · Oslo · Saigon</span></span>
+    <span class="eyebrow"><span class="pulse"></span><span data-i18n="eyebrow">AI Venture Studio · Not just your builder — your co-founder</span></span>
     <h1 class="hero-title"><span class="grad">NordiTech</span><span class="as"> AS</span></h1>
     <p class="lead" data-i18n="lead">We build AI-native products across media, finance, and services.</p>
     <p class="subline" data-i18n="subline">We partner on bold ideas and build toward shared ownership — at the speed of AI.</p>
@@ -239,11 +249,22 @@
       <span><b>4</b> <span data-i18n="m_live">live in production</span></span>
       <span class="sep"></span>
       <span><b>3</b> <span data-i18n="m_sectors">sectors</span></span>
+      <span class="sep"></span>
+      <span><b>0</b> <span data-i18n="m_invoices">hourly invoices</span></span>
     </div>
 
     <div class="about reveal">
       <div class="k" data-i18n="about_k">// About</div>
-      <p data-i18n="about_p">NordiTech AS is a Scandinavian-founded AI venture studio. We partner with founders and businesses on bold ideas, then design, build, and ship the product — developing toward shared ownership instead of billing by the hour. Fast cycles, real launches, aligned incentives.</p>
+      <p data-i18n="about_p">NordiTech AS is a Scandinavian-founded AI venture studio. We partner with founders and businesses on bold ideas, then design, build, and ship the product — developing toward shared ownership instead of billing by the hour. Fast cycles, real launches, aligned incentives. We've already done it nine times. That portfolio is our pitch.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="sec-head"><span class="label" data-i18n="hw_label">// How we work</span></div>
+    <div class="howgrid">
+      <div class="step reveal"><div class="step-n">01</div><h3 data-i18n="hw1_t">You bring the idea</h3><p data-i18n="hw1_b">Domain expertise and distribution. You don't need to be technical — you need to know the problem space better than anyone.</p></div>
+      <div class="step reveal"><div class="step-n">02</div><h3 data-i18n="hw2_t">We build the product</h3><p data-i18n="hw2_b">Design, engineering, and AI integration. No hourly invoices, no scope creep. A small monthly retainer (NOK 15–25k) covers infrastructure and direct costs.</p></div>
+      <div class="step reveal"><div class="step-n">03</div><h3 data-i18n="hw3_t">We grow it together</h3><p data-i18n="hw3_b">Equity vests against milestones — typically 20–35% to NordiTech. You own the brand, customers, and domain. We own the upside together.</p></div>
     </div>
   </section>
 
@@ -265,10 +286,10 @@
     <div class="cta reveal">
       <div class="cta-inner">
         <div>
-          <h2 data-i18n="cta_h">Got something worth building?</h2>
-          <p data-i18n="cta_p">We partner on bold ideas and build toward shared ownership — from first sketch to live in production. Tell us what you're building.</p>
+          <h2 data-i18n="cta_h">Building something in media, finance, or services?</h2>
+          <p data-i18n="cta_p">We partner with founders and domain experts who have a bold idea and the conviction to see it through. No pitch deck required — just tell us what you're building.</p>
         </div>
-        <a class="cta-btn" href="mailto:kilevold@gmail.com">
+        <a class="cta-btn" href="mailto:hello@norditech.no">
           <span data-i18n="cta_btn">Get in touch</span>
           <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
         </a>
@@ -284,7 +305,7 @@
       <span class="co">NordiTech AS</span>
       <span class="reg" data-i18n="foot_reg">// Oslo, Norway</span>
     </div>
-    <a class="mail" href="mailto:kilevold@gmail.com">kilevold@gmail.com</a>
+    <a class="mail" href="mailto:hello@norditech.no">hello@norditech.no</a>
   </div>
 </footer>
 
@@ -331,7 +352,7 @@ const PRODUCTS = [
     sector:{en:'Media',no:'Media'},
     desc:{en:'AI content platform that generates professional ad material — video and copy — across all social media formats.',
           no:'AI-innholdsplattform som lager profesjonelt annonsemateriell — video og tekst — for alle sosiale medier-formater.'},
-    label:'contentforge-610.netlify.app', url:'https://contentforge-610.netlify.app' },
+    label:'contentforge-610.netlify.app', url:null },
 
   { name:'SummonIt', slug:'summonit', status:'dev', icon:'bolt', tile:'#B25CFF',
     sector:{en:'Services',no:'Tjenester'},
@@ -361,27 +382,36 @@ const PRODUCTS = [
 const STATUS_LABEL = {
   live:{en:'Live',no:'Live'}, beta:{en:'Beta',no:'Beta'}, dev:{en:'In development',no:'Under utvikling'}
 };
+const PRIVATE_LABEL = {en:'Private beta', no:'Privat beta'};
 
 const I18N = {
-  en:{ nav_contact:'Contact', eyebrow:'AI venture studio · London · New York · Oslo · Saigon',
+  en:{ nav_contact:'Contact', eyebrow:'AI Venture Studio · Not just your builder — your co-founder',
        lead:'We build AI-native products across media, finance, and services.',
        subline:'We partner on bold ideas and build toward shared ownership — at the speed of AI.',
-       m_products:'products', m_live:'live in production', m_sectors:'sectors',
+       m_products:'products', m_live:'live in production', m_sectors:'sectors', m_invoices:'hourly invoices',
        about_k:'// About',
-       about_p:'NordiTech AS is a Scandinavian-founded AI venture studio. We partner with founders and businesses on bold ideas, then design, build, and ship the product — developing toward shared ownership instead of billing by the hour. Fast cycles, real launches, aligned incentives.',
+       about_p:"NordiTech AS is a Scandinavian-founded AI venture studio. We partner with founders and businesses on bold ideas, then design, build, and ship the product — developing toward shared ownership instead of billing by the hour. Fast cycles, real launches, aligned incentives. We've already done it nine times. That portfolio is our pitch.",
+       hw_label:'// How we work',
+       hw1_t:'You bring the idea', hw1_b:"Domain expertise and distribution. You don't need to be technical — you need to know the problem space better than anyone.",
+       hw2_t:'We build the product', hw2_b:'Design, engineering, and AI integration. No hourly invoices, no scope creep. A small monthly retainer (NOK 15–25k) covers infrastructure and direct costs.',
+       hw3_t:'We grow it together', hw3_b:'Equity vests against milestones — typically 20–35% to NordiTech. You own the brand, customers, and domain. We own the upside together.',
        products_label:'// Products <b>[09]</b>', f_all:'All', f_live:'Live', f_beta:'Beta', f_dev:'In development',
-       cta_h:'Got something worth building?',
-       cta_p:"We partner on bold ideas and build toward shared ownership — from first sketch to live in production. Tell us what you're building.",
+       cta_h:'Building something in media, finance, or services?',
+       cta_p:"We partner with founders and domain experts who have a bold idea and the conviction to see it through. No pitch deck required — just tell us what you're building.",
        cta_btn:'Get in touch', foot_reg:'// Oslo, Norway' },
-  no:{ nav_contact:'Kontakt', eyebrow:'AI-venturestudio · London · New York · Oslo · Saigon',
+  no:{ nav_contact:'Kontakt', eyebrow:'AI-venturestudio · Ikke bare bygger — din medgründer',
        lead:'Vi bygger AI-native produkter innen media, finans og tjenester.',
        subline:'Vi går inn som partner i sterke idéer og bygger mot eierskap — i AI-fart.',
-       m_products:'produkter', m_live:'i produksjon', m_sectors:'sektorer',
+       m_products:'produkter', m_live:'i produksjon', m_sectors:'sektorer', m_invoices:'timefakturaer',
        about_k:'// Om oss',
-       about_p:'NordiTech AS er et skandinavisk-grunnlagt AI-venturestudio. Vi går inn som partner i sterke idéer sammen med gründere og bedrifter, og designer, bygger og lanserer produktet — vi utvikler mot eierskap framfor å fakturere per time. Korte sykluser, ekte lanseringer, felles interesser.',
+       about_p:'NordiTech AS er et skandinavisk-grunnlagt AI-venturestudio. Vi går inn som partner i sterke idéer sammen med gründere og bedrifter, og designer, bygger og lanserer produktet — vi utvikler mot eierskap framfor å fakturere per time. Korte sykluser, ekte lanseringer, felles interesser. Vi har allerede gjort det ni ganger. Den porteføljen er pitchen vår.',
+       hw_label:'// Slik jobber vi',
+       hw1_t:'Du kommer med idéen', hw1_b:'Domenekunnskap og distribusjon. Du trenger ikke være tekniker — du trenger å kjenne problemområdet bedre enn noen.',
+       hw2_t:'Vi bygger produktet', hw2_b:'Design, utvikling og AI-integrasjon. Ingen timefakturaer, ingen scope creep. Et lite månedlig honorar (NOK 15–25k) dekker infrastruktur og direkte kostnader.',
+       hw3_t:'Vi vokser det sammen', hw3_b:'Eierandel opptjenes mot milepæler — typisk 20–35% til NordiTech. Du eier merkevaren, kundene og domenet. Vi eier oppsiden sammen.',
        products_label:'// Produkter <b>[09]</b>', f_all:'Alle', f_live:'Live', f_beta:'Beta', f_dev:'Under utvikling',
-       cta_h:'Har du noe som er verdt å bygge?',
-       cta_p:'Vi går inn som partner i sterke idéer og bygger mot eierskap — fra første skisse til lansering. Fortell oss hva du bygger.',
+       cta_h:'Bygger du noe innen media, finans eller tjenester?',
+       cta_p:'Vi går inn som partner med gründere og domeneeksperter som har en modig idé og overbevisningen til å gjennomføre den. Ingen pitch-deck nødvendig — bare fortell oss hva du bygger.',
        cta_btn:'Ta kontakt', foot_reg:'// Oslo, Norge' }
 };
 
@@ -403,10 +433,9 @@ function renderCards(){
       <h3>${p.name}</h3>
       <div class="sector">${p.sector[LANG]}</div>
       <p class="desc">${p.desc[LANG]}</p>
-      <a class="link" href="${p.url}" target="_blank" rel="noopener">
-        <span class="url">${p.label}</span>
-        <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
-      </a>
+      ${p.url
+        ? `<a class="link" href="${p.url}" target="_blank" rel="noopener"><span class="url">${p.label}</span><svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>`
+        : `<span class="link link-static">${PRIVATE_LABEL[LANG]}</span>`}
     </article>`;
   }).join('');
   applyFilter(currentFilter);
