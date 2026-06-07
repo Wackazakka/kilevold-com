@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Partner with NordiTech — Work with us</title>
+<meta name="description" content="Partner with NordiTech. We co-found products with founders and domain experts — equity-based models, no hourly invoices. Pitch us your idea." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='10 10 100 100'%3E%3Cdefs%3E%3ClinearGradient id='lvF' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23235FCB'/%3E%3Cstop offset='1' stop-color='%230B2C60'/%3E%3C/linearGradient%3E%3ClinearGradient id='stF' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%231B4FA8'/%3E%3Cstop offset='1' stop-color='%2322C6E8'/%3E%3C/linearGradient%3E%3ClinearGradient id='dgF' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FFFFFF'/%3E%3Cstop offset='0.6' stop-color='%23CFE0F2'/%3E%3Cstop offset='1' stop-color='%2374E6C6'/%3E%3C/linearGradient%3E%3ClinearGradient id='tbT' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%231FA6C8'/%3E%3Cstop offset='0.55' stop-color='%2336C77E'/%3E%3Cstop offset='1' stop-color='%23FFB454'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='24,40 42,40 49,31 31,31' fill='%233F7CEA'/%3E%3Cpolygon points='42,40 42,90 49,81 49,31' fill='%230A2750'/%3E%3Cpolygon points='24,40 42,40 42,90 24,90' fill='url(%23lvF)'/%3E%3Cpolygon points='64,44 82,44 89,35 71,35' fill='%233F7CEA'/%3E%3Cpolygon points='82,44 82,90 89,81 89,35' fill='%230A2750'/%3E%3Cpolygon points='64,44 82,44 82,90 64,90' fill='url(%23stF)'/%3E%3Cpolygon points='30,40 46,40 53,31 37,31' fill='%23EAF2FF'/%3E%3Cpolygon points='30,40 70,90 77,81 37,31' fill='%23AFC4DA'/%3E%3Cpolygon points='30,40 46,40 86,90 70,90' fill='url(%23dgF)'/%3E%3Cpolygon points='40,30 92,30 99,21 47,21' fill='url(%23tbT)'/%3E%3Cpolygon points='92,30 92,44 99,35 99,21' fill='%230E2C66'/%3E%3Cpolygon points='40,30 92,30 92,44 40,44' fill='%23143A86'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#06080F;
+    --ink:#EAF0FB;
+    --ink-soft:#9AA8C2;
+    --ink-faint:#65728C;
+    --line:rgba(255,255,255,0.09);
+    --line-strong:rgba(255,255,255,0.16);
+    --glass:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.014));
+    --panel:linear-gradient(180deg, rgba(23,29,45,.82), rgba(12,16,27,.86));
+
+    --cyan:#63E6FF;
+    --green:#5EF2A8;
+    --violet:#A78BFA;
+    --amber:#FFB454;
+    --bad:#F2768D;
+
+    --live:#34E89E;
+    --beta:#5AA8FF;
+    --dev:#FFB454;
+
+    --r-card:18px;
+    --maxw:1200px;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Hanken Grotesk",system-ui,sans-serif; font-weight:450; line-height:1.55;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+
+  /* ---------- Aurora background ---------- */
+  .aurora{position:fixed; inset:-20vh -10vw; z-index:0; pointer-events:none; filter:blur(70px); opacity:.85;}
+  .blob{position:absolute; border-radius:50%; mix-blend-mode:screen; will-change:transform;}
+  .b1{width:46vw; height:46vw; left:-6vw; top:-8vh; background:radial-gradient(circle at 50% 50%, rgba(94,242,168,.55), transparent 62%); animation:drift1 26s ease-in-out infinite;}
+  .b2{width:42vw; height:42vw; right:-8vw; top:-12vh; background:radial-gradient(circle at 50% 50%, rgba(99,230,255,.5), transparent 62%); animation:drift2 32s ease-in-out infinite;}
+  .b3{width:40vw; height:40vw; left:26vw; top:6vh; background:radial-gradient(circle at 50% 50%, rgba(167,139,250,.45), transparent 62%); animation:drift3 38s ease-in-out infinite;}
+  @keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(7vw,8vh) scale(1.18)}}
+  @keyframes drift2{0%,100%{transform:translate(0,0) scale(1.05)}50%{transform:translate(-6vw,10vh) scale(.9)}}
+  @keyframes drift3{0%,100%{transform:translate(0,0) scale(.95)}50%{transform:translate(4vw,-6vh) scale(1.2)}}
+  .grain{position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.05; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .scrim{position:fixed; inset:0; z-index:1; pointer-events:none;
+    background:linear-gradient(180deg, rgba(6,8,15,.15) 0%, rgba(6,8,15,.55) 42%, var(--bg) 78%);}
+  @media(prefers-reduced-motion:reduce){ .blob{animation:none !important;} }
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 30px; position:relative; z-index:2;}
+  a{color:inherit; text-decoration:none;}
+  .mono{font-family:var(--mono); font-feature-settings:"ss01";}
+
+  /* ---------- Header ---------- */
+  header.site{position:sticky; top:0; z-index:30; background:rgba(6,8,15,.62); backdrop-filter:saturate(150%) blur(16px); border-bottom:1px solid var(--line);}
+  .nav{display:flex; align-items:center; justify-content:space-between; height:72px;}
+  .brand{display:flex; align-items:center; gap:13px;}
+  .mark{width:48px; height:48px; flex:none;}
+  .brand .name{font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.02em; color:var(--ink); white-space:nowrap;}
+  .brand .name span{color:var(--ink-faint); font-weight:500;}
+  .nav-right{display:flex; align-items:center; gap:16px;}
+  .nav-back{font-family:var(--mono); font-size:13px; font-weight:500; color:var(--ink-soft); display:inline-flex; align-items:center; gap:7px; transition:color .18s ease;}
+  .nav-back:hover{color:var(--ink);}
+  .nav-back svg{width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none;}
+  @media(max-width:680px){ .nav-back span{display:none;} }
+  .langswitch{display:inline-flex; align-items:center; background:rgba(255,255,255,.05); border:1px solid var(--line); border-radius:999px; padding:3px; gap:2px;}
+  .langswitch button{font:inherit; font-family:var(--mono); font-weight:600; font-size:12px; letter-spacing:.04em; border:0; background:transparent; color:var(--ink-soft); padding:6px 11px; border-radius:999px; cursor:pointer; line-height:1; transition:all .18s ease;}
+  .langswitch button.active{background:rgba(255,255,255,.10); color:var(--ink); box-shadow:0 0 14px -4px rgba(99,230,255,.5);}
+  .nav-cta{display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:14px; color:#05210f; background:linear-gradient(135deg, var(--green), var(--cyan)); padding:10px 17px; border-radius:999px; transition:transform .18s ease, box-shadow .18s ease; box-shadow:0 0 24px -6px rgba(94,242,168,.6);}
+  .nav-cta:hover{transform:translateY(-1px); box-shadow:0 0 30px -4px rgba(94,242,168,.8);}
+  .nav-cta svg{width:15px; height:15px; stroke:currentColor; stroke-width:2; fill:none;}
+  @media(max-width:680px){ .nav-cta span{display:none;} .nav-cta{padding:10px;} }
+
+  /* ---------- Hero ---------- */
+  .hero{padding:84px 0 30px; max-width:860px;}
+  .eyebrow{display:inline-flex; align-items:center; gap:10px; font-family:var(--mono); font-size:12px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--cyan); padding:7px 15px; border:1px solid rgba(99,230,255,.28); border-radius:999px; background:rgba(99,230,255,.06); margin-bottom:28px; white-space:nowrap;}
+  @media(max-width:680px){ .eyebrow{white-space:normal; line-height:1.6; align-items:flex-start; border-radius:18px;} }
+  .eyebrow .pulse{width:8px; height:8px; border-radius:50%; background:var(--green); box-shadow:0 0 10px 1px var(--green); animation:pulse 2.4s ease-in-out infinite; flex:none;}
+  @keyframes pulse{0%,100%{opacity:1; transform:scale(1)}50%{opacity:.45; transform:scale(.78)}}
+  h1.ptitle{font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:clamp(40px,6.4vw,76px); line-height:.98; letter-spacing:-0.035em; margin:0 0 24px;}
+  h1.ptitle .grad{background:linear-gradient(104deg, #BFefff 0%, var(--green) 38%, var(--cyan) 60%, var(--violet) 100%); background-size:200% auto; -webkit-background-clip:text; background-clip:text; color:transparent; animation:shimmer 8s linear infinite;}
+  @keyframes shimmer{to{background-position:200% center;}}
+  .lead{font-size:clamp(17px,2vw,21px); color:var(--ink); font-weight:450; max-width:720px; margin:0; text-wrap:pretty; line-height:1.45;}
+  .lead b{color:var(--ink); font-weight:600;}
+
+  /* ---------- Section head ---------- */
+  .sec-head{margin:74px 0 12px;}
+  .sec-head .label{font-family:var(--mono); font-size:13px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint);}
+  .sec-head .label b{color:var(--ink);}
+  .sec-intro{font-size:17px; color:var(--ink-soft); max-width:700px; margin:0 0 26px; text-wrap:pretty; line-height:1.5;}
+
+  /* ---------- The models ---------- */
+  .models{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; align-items:stretch; margin-top:30px;}
+  @media(max-width:940px){ .models{grid-template-columns:1fr;} }
+  .model{position:relative; display:flex; flex-direction:column; background:var(--panel); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-card); padding:30px 26px 28px; backdrop-filter:blur(14px); box-shadow:0 14px 40px -20px rgba(0,0,0,.75); --ac:var(--cyan); transition:transform .22s ease, box-shadow .22s ease;}
+  .model::before{content:""; position:absolute; top:0; left:24px; right:24px; height:1px; background:linear-gradient(90deg,transparent,var(--ac),transparent); opacity:.55;}
+  .model:hover{transform:translateY(-5px); box-shadow:0 28px 60px -26px rgba(0,0,0,.9), 0 0 40px -18px var(--ac);}
+  .model--rec{border-color:color-mix(in srgb,var(--green) 50%, rgba(255,255,255,.12)); box-shadow:0 18px 52px -20px rgba(0,0,0,.85), 0 0 48px -16px var(--green); --ac:var(--green);}
+  .model-tag{position:absolute; top:-13px; left:50%; transform:translateX(-50%); font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:#05210f; background:linear-gradient(135deg,var(--green),var(--cyan)); padding:6px 15px; border-radius:999px; white-space:nowrap; box-shadow:0 0 24px -6px var(--green);}
+  .model-n{font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px;}
+  .model h3{font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:23px; letter-spacing:-.02em; margin:0 0 16px; color:var(--ink);}
+  .model .bestfor{font-size:13.5px; color:var(--ink); background:color-mix(in srgb,var(--ac) 11%, transparent); border:1px solid color-mix(in srgb,var(--ac) 26%, transparent); border-radius:11px; padding:10px 13px; margin:0 0 16px; line-height:1.45;}
+  .model .bestfor b{color:var(--ac); font-weight:600;}
+  .model p.body{margin:0; color:var(--ink-soft); font-size:15px; line-height:1.6; text-wrap:pretty;}
+
+  /* ---------- Are we a fit ---------- */
+  .fit{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:24px;}
+  @media(max-width:760px){ .fit{grid-template-columns:1fr;} }
+  .fit-col{background:var(--panel); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-card); padding:28px 28px 26px; backdrop-filter:blur(14px); box-shadow:0 14px 40px -20px rgba(0,0,0,.75);}
+  .fit-col h3{display:flex; align-items:center; gap:11px; font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:19px; letter-spacing:-.02em; margin:0 0 20px; color:var(--ink);}
+  .fit-col h3 .ic{width:28px; height:28px; border-radius:9px; display:inline-flex; align-items:center; justify-content:center; flex:none;}
+  .fit-col h3 .ic svg{width:17px; height:17px; stroke-width:2.4; fill:none; stroke-linecap:round; stroke-linejoin:round;}
+  .fit-good h3 .ic{background:color-mix(in srgb,var(--green) 18%,transparent); color:var(--green);} .fit-good h3 .ic svg{stroke:var(--green);}
+  .fit-bad h3 .ic{background:rgba(255,255,255,.06); color:var(--ink-faint);} .fit-bad h3 .ic svg{stroke:var(--bad);}
+  .fit-col ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px;}
+  .fit-col li{display:flex; align-items:flex-start; gap:11px; font-size:15.5px; line-height:1.45;}
+  .fit-col li svg{width:18px; height:18px; flex:none; margin-top:2px; stroke-width:2.2; fill:none; stroke-linecap:round; stroke-linejoin:round;}
+  .fit-good li{color:var(--ink);} .fit-good li svg{stroke:var(--green);}
+  .fit-bad li{color:var(--ink-faint);} .fit-bad li svg{stroke:var(--bad);}
+
+  /* ---------- Pitch form ---------- */
+  .pitch{background:var(--panel); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-card); padding:36px 36px 38px; backdrop-filter:blur(14px); box-shadow:0 14px 40px -20px rgba(0,0,0,.8); max-width:780px; margin-top:30px; position:relative; overflow:hidden;}
+  .pitch::before{content:""; position:absolute; top:0; left:30px; right:30px; height:1px; background:linear-gradient(90deg,transparent,var(--cyan),transparent); opacity:.5;}
+  .form-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  @media(max-width:600px){ .form-grid{grid-template-columns:1fr;} }
+  .field{display:flex; flex-direction:column; gap:7px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-family:var(--mono); font-size:11.5px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft);}
+  .field label .opt{color:var(--ink-faint); text-transform:none; letter-spacing:0; font-weight:400;}
+  .field input, .field select, .field textarea{font:inherit; font-size:15px; color:var(--ink); background:rgba(255,255,255,.04); border:1px solid var(--line-strong); border-radius:12px; padding:12px 14px; width:100%; transition:border-color .18s ease, box-shadow .18s ease; -webkit-appearance:none; appearance:none;}
+  .field input::placeholder, .field textarea::placeholder{color:var(--ink-faint);}
+  .field textarea{resize:vertical; min-height:92px;}
+  .field input:focus, .field select:focus, .field textarea:focus{outline:none; border-color:color-mix(in srgb,var(--cyan) 60%, var(--line-strong)); box-shadow:0 0 0 3px rgba(99,230,255,.12);}
+  .field select{cursor:pointer; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239AA8C2' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; padding-right:40px;}
+  .field select option{background:#0b0f1a; color:var(--ink);}
+  .submit-row{margin-top:26px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;}
+  .submit-btn{display:inline-flex; align-items:center; gap:10px; background:linear-gradient(135deg, var(--green), var(--cyan)); color:#05210f; font-weight:700; font-size:15.5px; padding:15px 28px; border:0; border-radius:999px; cursor:pointer; white-space:nowrap; transition:transform .18s ease, box-shadow .18s ease; box-shadow:0 0 34px -8px rgba(94,242,168,.7); font-family:inherit;}
+  .submit-btn:hover{transform:translateY(-2px); box-shadow:0 0 44px -6px rgba(94,242,168,.9);}
+  .submit-btn:disabled{opacity:.6; cursor:default; transform:none;}
+  .submit-btn svg{width:16px; height:16px; stroke:currentColor; stroke-width:2.2; fill:none;}
+  .submit-note{font-family:var(--mono); font-size:12px; color:var(--ink-faint);}
+
+  /* ---------- Success ---------- */
+  .pitch-success{display:none; text-align:center; padding:34px 16px 30px;}
+  .pitch-success.show{display:block; animation:ndRise .5s cubic-bezier(.22,.61,.36,1) both;}
+  .pitch-success .chk{width:62px; height:62px; border-radius:50%; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; background:color-mix(in srgb,var(--green) 16%,transparent); border:1px solid color-mix(in srgb,var(--green) 40%,transparent); box-shadow:0 0 30px -8px var(--green);}
+  .pitch-success .chk svg{width:30px; height:30px; stroke:var(--green); stroke-width:2.6; fill:none; stroke-linecap:round; stroke-linejoin:round;}
+  .pitch-success h3{font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:25px; letter-spacing:-.02em; margin:0 0 9px; color:var(--ink);}
+  .pitch-success p{color:var(--ink-soft); font-size:16.5px; margin:0;}
+
+  /* ---------- Footer ---------- */
+  footer.site{margin-top:80px; border-top:1px solid var(--line); padding:38px 0 60px;}
+  .foot{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;}
+  .foot .l{display:flex; align-items:center; gap:12px;}
+  .foot .mark{width:28px; height:28px;}
+  .foot .co{font-family:"Space Grotesk",sans-serif; font-weight:600; color:var(--ink); font-size:14.5px; white-space:nowrap;}
+  .foot a.mail{font-family:var(--mono); color:var(--cyan); font-weight:500; font-size:13.5px; border-bottom:1px solid transparent; transition:border-color .18s;}
+  .foot a.mail:hover{border-bottom-color:var(--cyan);}
+
+  /* reveal (transform-only — never hides content) */
+  @keyframes ndRise{from{transform:translateY(18px);} to{transform:none;}}
+  .reveal{animation:ndRise .55s cubic-bezier(.22,.61,.36,1) both;}
+  @media(prefers-reduced-motion:reduce){ .reveal{animation:none;} }
+</style>
+</head>
+<body>
+
+<div class="aurora" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+</div>
+<div class="scrim" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lvF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#235FCB"/><stop offset="1" stop-color="#0B2C60"/></linearGradient>
+    <linearGradient id="stF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B4FA8"/><stop offset="1" stop-color="#22C6E8"/></linearGradient>
+    <linearGradient id="dgF" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.6" stop-color="#CFE0F2"/><stop offset="1" stop-color="#74E6C6"/></linearGradient>
+    <linearGradient id="tbT" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1FA6C8"/><stop offset="0.55" stop-color="#36C77E"/><stop offset="1" stop-color="#FFB454"/></linearGradient>
+    <symbol id="nd-mark" viewBox="10 10 100 100">
+      <polygon points="24,40 42,40 49,31 31,31" fill="#3F7CEA"/>
+      <polygon points="42,40 42,90 49,81 49,31" fill="#0A2750"/>
+      <polygon points="24,40 42,40 42,90 24,90" fill="url(#lvF)"/>
+      <polygon points="64,44 82,44 89,35 71,35" fill="#3F7CEA"/>
+      <polygon points="82,44 82,90 89,81 89,35" fill="#0A2750"/>
+      <polygon points="64,44 82,44 82,90 64,90" fill="url(#stF)"/>
+      <polygon points="30,40 46,40 53,31 37,31" fill="#EAF2FF"/>
+      <polygon points="30,40 70,90 77,81 37,31" fill="#AFC4DA"/>
+      <polygon points="30,40 46,40 86,90 70,90" fill="url(#dgF)"/>
+      <polygon points="40,30 92,30 99,21 47,21" fill="url(#tbT)"/>
+      <polygon points="92,30 92,44 99,35 99,21" fill="#0E2C66"/>
+      <polygon points="40,30 92,30 92,44 40,44" fill="#143A86"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="NordiTech">
+      <svg class="mark" viewBox="0 0 100 100"><use href="#nd-mark"/></svg>
+      <span class="name">NordiTech</span>
+    </a>
+    <div class="nav-right">
+      <a class="nav-back" href="/">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg>
+        <span data-i18n="nav_back">Back to portfolio</span>
+      </a>
+      <div class="langswitch" role="group" aria-label="Language">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="no">NO</button>
+      </div>
+      <a class="nav-cta" href="#pitch">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        <span data-i18n="nav_pitch">Pitch us</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <span class="eyebrow"><span class="pulse"></span><span data-i18n="hero_eyebrow">Open for new partners</span></span>
+    <h1 class="ptitle" data-i18n="hero_title">Partner with <span class="grad">NordiTech</span></h1>
+    <p class="lead" data-i18n="hero_lead">We work with founders and domain experts who have a bold idea and the conviction to see it through. Choose the model that fits your stage — or tell us where you are, and we'll figure it out together.</p>
+  </section>
+
+  <!-- The models -->
+  <section class="wrap">
+    <div class="sec-head"><span class="label" data-i18n="models_label">// The models</span></div>
+    <p class="sec-intro" data-i18n="models_intro">Three ways to structure a partnership. Most start with the middle one — but nothing is set in stone until we've talked.</p>
+    <div class="models">
+      <div class="model reveal">
+        <div class="model-n" data-i18n="m1_n">Model 01</div>
+        <h3 data-i18n="m1_t">Equity only</h3>
+        <p class="bestfor" data-i18n="m1_best"><b>Best for:</b> Early-stage ideas with no revenue yet.</p>
+        <p class="body" data-i18n="m1_b">You bring the domain expertise and distribution. We build the product. No monthly cost — we take 30–40% equity instead. Pure shared upside, zero billing.</p>
+      </div>
+      <div class="model model--rec reveal">
+        <div class="model-tag" data-i18n="m2_tag">Recommended</div>
+        <div class="model-n" data-i18n="m2_n">Model 02</div>
+        <h3 data-i18n="m2_t">Retainer + equity</h3>
+        <p class="bestfor" data-i18n="m2_best"><b>Best for:</b> Ideas with some validation, or partners who want faster commitment from both sides.</p>
+        <p class="body" data-i18n="m2_b">A small monthly retainer (NOK 15–25k) covers infrastructure and direct costs. We take 20–35% equity. This is how most of our partnerships are structured.</p>
+      </div>
+      <div class="model reveal">
+        <div class="model-n" data-i18n="m3_n">Model 03</div>
+        <h3 data-i18n="m3_t">Milestone-vested equity</h3>
+        <p class="bestfor" data-i18n="m3_best"><b>Best for:</b> Partners who want to stay lean until traction is proven.</p>
+        <p class="body" data-i18n="m3_b">Equity is allocated in tranches as milestones are hit — MVP, first paying customers, revenue targets. Retainer optional. Structure agreed upfront.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Are we a fit -->
+  <section class="wrap">
+    <div class="sec-head"><span class="label" data-i18n="fit_label">// Are we a fit?</span></div>
+    <div class="fit">
+      <div class="fit-col fit-good reveal">
+        <h3><span class="ic"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="fit_good_h">Good fit</span></h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="fit_g1">You have deep domain knowledge in media, finance, or services</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="fit_g2">You want a technical co-founder, not a vendor</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="fit_g3">You're comfortable with shared ownership</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="fit_g4">You want to move fast</span></li>
+        </ul>
+      </div>
+      <div class="fit-col fit-bad reveal">
+        <h3><span class="ic"><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span><span data-i18n="fit_bad_h">Not a fit</span></h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg><span data-i18n="fit_b1">You need a fixed-price quote</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg><span data-i18n="fit_b2">You want to retain 100% ownership</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg><span data-i18n="fit_b3">You're looking for a freelancer or agency</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pitch us -->
+  <section class="wrap" id="pitch">
+    <div class="sec-head"><span class="label" data-i18n="pitch_label">// Pitch us</span></div>
+    <p class="sec-intro" style="margin-bottom:6px;"><span data-i18n="pitch_h" style="display:block; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(24px,3vw,32px); letter-spacing:-.02em; color:var(--ink); margin-bottom:10px; line-height:1.1;">Tell us what you're building</span><span data-i18n="pitch_intro">No deck required. Fill in what you can — we'll take it from there.</span></p>
+
+    <div class="pitch reveal">
+      <form name="partner-pitch" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="pitchForm">
+        <input type="hidden" name="form-name" value="partner-pitch" />
+        <p hidden><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-name" data-i18n="f_name">Name</label>
+            <input id="f-name" name="name" type="text" required autocomplete="name" data-i18n-ph="ph_name" placeholder="Jane Doe" />
+          </div>
+          <div class="field">
+            <label for="f-email" data-i18n="f_email">Email</label>
+            <input id="f-email" name="email" type="email" required autocomplete="email" data-i18n-ph="ph_email" placeholder="you@company.com" />
+          </div>
+
+          <div class="field full">
+            <label for="f-building" data-i18n="f_building">What are you building?</label>
+            <textarea id="f-building" name="building" required data-i18n-ph="ph_building" placeholder="Two or three lines is plenty."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="f-sector" data-i18n="f_sector">Sector</label>
+            <select id="f-sector" name="sector" required>
+              <option value="" data-i18n="opt_select">Select…</option>
+              <option value="Media" data-i18n="sec_media">Media</option>
+              <option value="Finance" data-i18n="sec_finance">Finance</option>
+              <option value="Services" data-i18n="sec_services">Services</option>
+              <option value="Other" data-i18n="sec_other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-stage" data-i18n="f_stage">Stage</label>
+            <select id="f-stage" name="stage" required>
+              <option value="" data-i18n="opt_select">Select…</option>
+              <option value="Just an idea" data-i18n="stage_idea">Just an idea</option>
+              <option value="Early prototype" data-i18n="stage_proto">Early prototype</option>
+              <option value="Has customers" data-i18n="stage_customers">Has customers</option>
+              <option value="Generating revenue" data-i18n="stage_revenue">Generating revenue</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="f-model" data-i18n="f_model">Which model interests you?</label>
+            <select id="f-model" name="model" required>
+              <option value="" data-i18n="opt_select">Select…</option>
+              <option value="Equity only" data-i18n="model_equity">Equity only</option>
+              <option value="Retainer + equity" data-i18n="model_retainer">Retainer + equity</option>
+              <option value="Milestone-vested" data-i18n="model_milestone">Milestone-vested</option>
+              <option value="Not sure yet" data-i18n="model_unsure">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="f-notes" data-i18n="f_notes">Anything else we should know? <span class="opt">(optional)</span></label>
+            <textarea id="f-notes" name="notes"></textarea>
+          </div>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit" class="submit-btn">
+            <span data-i18n="f_submit">Send pitch</span>
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </button>
+          <span class="submit-note" data-i18n="f_privacy">Goes straight to us — nothing shared.</span>
+        </div>
+      </form>
+
+      <div class="pitch-success" id="pitchSuccess">
+        <div class="chk"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3 data-i18n="success_h">Got it.</h3>
+        <p data-i18n="success_p">We'll be in touch within 2 business days.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot">
+    <div class="l">
+      <svg class="mark" viewBox="0 0 100 100"><use href="#nd-mark"/></svg>
+      <span class="co">NordiTech AS</span>
+    </div>
+    <a class="mail" href="mailto:hello@norditech.io">hello@norditech.io</a>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+  en:{
+    nav_back:'Back to portfolio', nav_pitch:'Pitch us',
+    hero_eyebrow:'Open for new partners',
+    hero_title:'Partner with <span class="grad">NordiTech</span>',
+    hero_lead:"We work with founders and domain experts who have a bold idea and the conviction to see it through. Choose the model that fits your stage — or tell us where you are, and we'll figure it out together.",
+    models_label:'// The models',
+    models_intro:"Three ways to structure a partnership. Most start with the middle one — but nothing is set in stone until we've talked.",
+    m1_n:'Model 01', m1_t:'Equity only',
+    m1_best:'<b>Best for:</b> Early-stage ideas with no revenue yet.',
+    m1_b:'You bring the domain expertise and distribution. We build the product. No monthly cost — we take 30–40% equity instead. Pure shared upside, zero billing.',
+    m2_tag:'Recommended', m2_n:'Model 02', m2_t:'Retainer + equity',
+    m2_best:'<b>Best for:</b> Ideas with some validation, or partners who want faster commitment from both sides.',
+    m2_b:'A small monthly retainer (NOK 15–25k) covers infrastructure and direct costs. We take 20–35% equity. This is how most of our partnerships are structured.',
+    m3_n:'Model 03', m3_t:'Milestone-vested equity',
+    m3_best:'<b>Best for:</b> Partners who want to stay lean until traction is proven.',
+    m3_b:'Equity is allocated in tranches as milestones are hit — MVP, first paying customers, revenue targets. Retainer optional. Structure agreed upfront.',
+    fit_label:'// Are we a fit?',
+    fit_good_h:'Good fit',
+    fit_g1:'You have deep domain knowledge in media, finance, or services',
+    fit_g2:'You want a technical co-founder, not a vendor',
+    fit_g3:"You're comfortable with shared ownership",
+    fit_g4:'You want to move fast',
+    fit_bad_h:'Not a fit',
+    fit_b1:'You need a fixed-price quote',
+    fit_b2:'You want to retain 100% ownership',
+    fit_b3:"You're looking for a freelancer or agency",
+    pitch_label:'// Pitch us',
+    pitch_h:"Tell us what you're building",
+    pitch_intro:"No deck required. Fill in what you can — we'll take it from there.",
+    f_name:'Name', f_email:'Email', f_building:'What are you building?',
+    f_sector:'Sector', f_stage:'Stage', f_model:'Which model interests you?',
+    f_notes:'Anything else we should know? <span class="opt">(optional)</span>',
+    f_submit:'Send pitch', f_privacy:'Goes straight to us — nothing shared.',
+    opt_select:'Select…',
+    sec_media:'Media', sec_finance:'Finance', sec_services:'Services', sec_other:'Other',
+    stage_idea:'Just an idea', stage_proto:'Early prototype', stage_customers:'Has customers', stage_revenue:'Generating revenue',
+    model_equity:'Equity only', model_retainer:'Retainer + equity', model_milestone:'Milestone-vested', model_unsure:'Not sure yet',
+    ph_name:'Jane Doe', ph_email:'you@company.com', ph_building:'Two or three lines is plenty.',
+    success_h:'Got it.', success_p:"We'll be in touch within 2 business days."
+  },
+  no:{
+    nav_back:'Tilbake til porteføljen', nav_pitch:'Pitch oss',
+    hero_eyebrow:'Åpen for nye partnere',
+    hero_title:'Bli partner med <span class="grad">NordiTech</span>',
+    hero_lead:'Vi jobber med gründere og bransjeeksperter som har en modig idé og overbevisningen til å gjennomføre den. Velg modellen som passer din fase — eller fortell oss hvor du står, så finner vi ut av det sammen.',
+    models_label:'// Modellene',
+    models_intro:'Tre måter å strukturere et partnerskap på. De fleste starter med den i midten — men ingenting er hugget i stein før vi har snakket sammen.',
+    m1_n:'Modell 01', m1_t:'Kun eierandel',
+    m1_best:'<b>Passer best for:</b> Tidligfase-idéer uten inntekt ennå.',
+    m1_b:'Du bringer bransjekunnskapen og distribusjonen. Vi bygger produktet. Ingen månedlig kostnad — vi tar 30–40 % eierandel i stedet. Ren delt oppside, null fakturering.',
+    m2_tag:'Anbefalt', m2_n:'Modell 02', m2_t:'Honorar + eierandel',
+    m2_best:'<b>Passer best for:</b> Idéer med en viss validering, eller partnere som vil ha raskere forpliktelse fra begge sider.',
+    m2_b:'Et lite månedlig honorar (NOK 15–25k) dekker infrastruktur og direkte kostnader. Vi tar 20–35 % eierandel. Slik er de fleste av partnerskapene våre strukturert.',
+    m3_n:'Modell 03', m3_t:'Milepæl-opptjent eierandel',
+    m3_best:'<b>Passer best for:</b> Partnere som vil holde det slankt til traction er bevist.',
+    m3_b:'Eierandel tildeles i transjer etter hvert som milepæler nås — MVP, første betalende kunder, inntektsmål. Honorar valgfritt. Struktur avtalt på forhånd.',
+    fit_label:'// Passer vi sammen?',
+    fit_good_h:'Passer godt',
+    fit_g1:'Du har dyp bransjekunnskap innen media, finans eller tjenester',
+    fit_g2:'Du vil ha en teknisk medgründer, ikke en leverandør',
+    fit_g3:'Du er komfortabel med delt eierskap',
+    fit_g4:'Du vil bevege deg raskt',
+    fit_bad_h:'Passer ikke',
+    fit_b1:'Du trenger et fastpristilbud',
+    fit_b2:'Du vil beholde 100 % eierskap',
+    fit_b3:'Du ser etter en frilanser eller et byrå',
+    pitch_label:'// Pitch oss',
+    pitch_h:'Fortell oss hva du bygger',
+    pitch_intro:'Ingen pitch-deck nødvendig. Fyll inn det du kan — så tar vi det derfra.',
+    f_name:'Navn', f_email:'E-post', f_building:'Hva bygger du?',
+    f_sector:'Sektor', f_stage:'Fase', f_model:'Hvilken modell er du interessert i?',
+    f_notes:'Noe annet vi bør vite? <span class="opt">(valgfritt)</span>',
+    f_submit:'Send pitch', f_privacy:'Går rett til oss — ingenting deles.',
+    opt_select:'Velg…',
+    sec_media:'Media', sec_finance:'Finans', sec_services:'Tjenester', sec_other:'Annet',
+    stage_idea:'Bare en idé', stage_proto:'Tidlig prototype', stage_customers:'Har kunder', stage_revenue:'Genererer inntekt',
+    model_equity:'Kun eierandel', model_retainer:'Honorar + eierandel', model_milestone:'Milepæl-opptjent', model_unsure:'Ikke sikker ennå',
+    ph_name:'Kari Nordmann', ph_email:'deg@bedrift.no', ph_building:'To eller tre linjer holder lenge.',
+    success_h:'Mottatt.', success_p:'Vi tar kontakt innen 2 virkedager.'
+  }
+};
+
+let LANG = localStorage.getItem('nd_lang') || 'en';
+
+function applyLang(lang){
+  LANG = lang;
+  localStorage.setItem('nd_lang', lang);
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.getAttribute('data-i18n');
+    if(I18N[lang][k]!==undefined) el.innerHTML = I18N[lang][k];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
+    const k = el.getAttribute('data-i18n-ph');
+    if(I18N[lang][k]!==undefined) el.placeholder = I18N[lang][k];
+  });
+  document.querySelectorAll('.langswitch button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+}
+document.querySelectorAll('.langswitch button').forEach(b=>{
+  b.addEventListener('click', ()=>applyLang(b.dataset.lang));
+});
+
+/* ---------- Form submit (Netlify Forms via AJAX, inline confirmation) ---------- */
+const form = document.getElementById('pitchForm');
+form.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const btn = form.querySelector('.submit-btn');
+  btn.disabled = true;
+  try{
+    const body = new URLSearchParams(new FormData(form)).toString();
+    await fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body });
+    form.style.display = 'none';
+    const ok = document.getElementById('pitchSuccess');
+    ok.classList.add('show');
+    ok.scrollIntoView({behavior:'smooth', block:'center'});
+  }catch(err){
+    btn.disabled = false;
+    alert(LANG==='no' ? 'Noe gikk galt — prøv igjen, eller send e-post til hello@norditech.io' : 'Something went wrong — please try again, or email hello@norditech.io');
+  }
+});
+
+applyLang(LANG);
+</script>
+</body>
+</html>
