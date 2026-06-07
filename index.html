@@ -94,7 +94,7 @@
   .meta-row .sep{width:5px; height:5px; border-radius:50%; background:var(--cyan); box-shadow:0 0 8px var(--cyan);}
 
   /* ---------- Hero top (text + product logos) ---------- */
-  .hero-top{display:grid; grid-template-columns:minmax(0,1fr) 256px; gap:44px; align-items:center;}
+  .hero-top{display:grid; grid-template-columns:minmax(0,720px) 256px minmax(0,1fr); gap:44px; align-items:center;}
   .hero-logos{display:grid; grid-template-columns:repeat(3,1fr); gap:22px 16px;}
   .hl{display:flex; flex-direction:column; align-items:center; gap:9px; text-align:center;}
   .hl-tile{position:relative; width:100%; aspect-ratio:1; border-radius:15px; overflow:hidden; background:linear-gradient(150deg, color-mix(in srgb, var(--tile) 88%, #000), color-mix(in srgb, var(--tile) 48%, #000)); box-shadow:0 10px 26px -10px var(--tile), inset 0 1px 0 rgba(255,255,255,.22); transition:transform .18s ease, box-shadow .18s ease;}
@@ -105,7 +105,7 @@
   .hl-tile img.logo-img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; display:block;}
   .hl-name{font-family:var(--mono); font-size:10.5px; line-height:1.2; letter-spacing:.01em; color:var(--ink-soft); transition:color .18s ease;}
   .hl:hover .hl-name{color:var(--ink);}
-  @media(max-width:1000px){ .hero-top{grid-template-columns:1fr; gap:0;} .hero-logos{display:none;} }
+  @media(max-width:1100px){ .hero-top{grid-template-columns:1fr; gap:0;} .hero-logos{display:none;} }
 
   /* ---------- About ---------- */
   .about{margin:64px 0 6px; padding:30px 34px; background:var(--panel); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-card); display:grid; grid-template-columns:170px 1fr; gap:30px; align-items:start; position:relative; overflow:hidden; backdrop-filter:blur(14px); box-shadow:0 12px 40px -20px rgba(0,0,0,.7);}
@@ -155,6 +155,9 @@
   .icon-tile svg{width:27px; height:27px; stroke:#fff; stroke-width:1.9; fill:none; stroke-linecap:round; stroke-linejoin:round;}
   .icon-tile svg.fill{fill:#fff; stroke:none;}
   .icon-tile img.logo-img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; display:block;}
+  /* When a real logo image is present, hide the fallback glyph behind it (so transparent
+     logos like the handshake don't show the glyph bleeding through). */
+  .icon-tile:has(img.logo-img) .glyph, .hl-tile:has(img.logo-img) .glyph{ display:none; }
 
   .badge{display:inline-flex; align-items:center; gap:7px; font-family:var(--mono); font-size:11.5px; font-weight:500; letter-spacing:.03em; padding:5px 11px; border-radius:999px; white-space:nowrap; color:var(--ac); background:color-mix(in srgb, var(--ac) 12%, transparent); border:1px solid color-mix(in srgb, var(--ac) 32%, transparent);}
   .badge .d{width:6px; height:6px; border-radius:50%; background:var(--ac); box-shadow:0 0 8px var(--ac);}
