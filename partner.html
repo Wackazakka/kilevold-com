@@ -107,8 +107,6 @@
   .model{position:relative; display:flex; flex-direction:column; background:var(--panel); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-card); padding:30px 26px 28px; backdrop-filter:blur(14px); box-shadow:0 14px 40px -20px rgba(0,0,0,.75); --ac:var(--cyan); transition:transform .22s ease, box-shadow .22s ease;}
   .model::before{content:""; position:absolute; top:0; left:24px; right:24px; height:1px; background:linear-gradient(90deg,transparent,var(--ac),transparent); opacity:.55;}
   .model:hover{transform:translateY(-5px); box-shadow:0 28px 60px -26px rgba(0,0,0,.9), 0 0 40px -18px var(--ac);}
-  .model--rec{border-color:color-mix(in srgb,var(--green) 50%, rgba(255,255,255,.12)); box-shadow:0 18px 52px -20px rgba(0,0,0,.85), 0 0 48px -16px var(--green); --ac:var(--green);}
-  .model-tag{position:absolute; top:-13px; left:50%; transform:translateX(-50%); font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:#05210f; background:linear-gradient(135deg,var(--green),var(--cyan)); padding:6px 15px; border-radius:999px; white-space:nowrap; box-shadow:0 0 24px -6px var(--green);}
   .model-n{font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px;}
   .model h3{font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:23px; letter-spacing:-.02em; margin:0 0 16px; color:var(--ink);}
   .model .bestfor{font-size:13.5px; color:var(--ink); background:color-mix(in srgb,var(--ac) 11%, transparent); border:1px solid color-mix(in srgb,var(--ac) 26%, transparent); border-radius:11px; padding:10px 13px; margin:0 0 16px; line-height:1.45;}
@@ -231,15 +229,15 @@
 
 <main id="top">
   <section class="hero wrap">
-    <span class="eyebrow"><span class="pulse"></span><span data-i18n="hero_eyebrow">Open for new partners</span></span>
+    <span class="eyebrow"><span class="pulse"></span><span data-i18n="hero_eyebrow">Now accepting pitches</span></span>
     <h1 class="ptitle" data-i18n="hero_title">Partner with <span class="grad">NordiTech</span></h1>
-    <p class="lead" data-i18n="hero_lead">We work with founders and domain experts who have a bold idea and the conviction to see it through. Choose the model that fits your stage — or tell us where you are, and we'll figure it out together.</p>
+    <p class="lead" data-i18n="hero_lead">We take on a handful of partners a year — founders and domain experts with a bold idea and the conviction to see it through. We don't take on clients; we pick a few people to build alongside. This is where you make your case.</p>
   </section>
 
   <!-- The models -->
   <section class="wrap">
     <div class="sec-head"><span class="label" data-i18n="models_label">// The models</span></div>
-    <p class="sec-intro" data-i18n="models_intro">Three ways to structure a partnership. Most start with the middle one — but nothing is set in stone until we've talked.</p>
+    <p class="sec-intro" data-i18n="models_intro">If we decide to build together, this is how partnerships are usually structured. Which one we land on depends on your stage — we work that out with you.</p>
     <div class="models">
       <div class="model reveal">
         <div class="model-n" data-i18n="m1_n">Model 01</div>
@@ -247,8 +245,7 @@
         <p class="bestfor" data-i18n="m1_best"><b>Best for:</b> Early-stage ideas with no revenue yet.</p>
         <p class="body" data-i18n="m1_b">You bring the domain expertise and distribution. We build the product. No monthly cost — we take 30–40% equity instead. Pure shared upside, zero billing.</p>
       </div>
-      <div class="model model--rec reveal">
-        <div class="model-tag" data-i18n="m2_tag">Recommended</div>
+      <div class="model reveal">
         <div class="model-n" data-i18n="m2_n">Model 02</div>
         <h3 data-i18n="m2_t">Retainer + equity</h3>
         <p class="bestfor" data-i18n="m2_best"><b>Best for:</b> Ideas with some validation, or partners who want faster commitment from both sides.</p>
@@ -290,7 +287,7 @@
   <!-- Pitch us -->
   <section class="wrap" id="pitch">
     <div class="sec-head"><span class="label" data-i18n="pitch_label">// Pitch us</span></div>
-    <p class="sec-intro" style="margin-bottom:6px;"><span data-i18n="pitch_h" style="display:block; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(24px,3vw,32px); letter-spacing:-.02em; color:var(--ink); margin-bottom:10px; line-height:1.1;">Tell us what you're building</span><span data-i18n="pitch_intro">No deck required. Fill in what you can — we'll take it from there.</span></p>
+    <p class="sec-intro" style="margin-bottom:6px;"><span data-i18n="pitch_h" style="display:block; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(24px,3vw,32px); letter-spacing:-.02em; color:var(--ink); margin-bottom:10px; line-height:1.1;">Tell us what you're building</span><span data-i18n="pitch_intro">No deck required. Fill in what you can — we read every pitch ourselves.</span></p>
 
     <div class="pitch reveal">
       <form name="partner-pitch" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="pitchForm">
@@ -382,15 +379,15 @@
 const I18N = {
   en:{
     nav_back:'Back to portfolio', nav_pitch:'Pitch us',
-    hero_eyebrow:'Open for new partners',
+    hero_eyebrow:'Now accepting pitches',
     hero_title:'Partner with <span class="grad">NordiTech</span>',
-    hero_lead:"We work with founders and domain experts who have a bold idea and the conviction to see it through. Choose the model that fits your stage — or tell us where you are, and we'll figure it out together.",
+    hero_lead:"We take on a handful of partners a year — founders and domain experts with a bold idea and the conviction to see it through. We don't take on clients; we pick a few people to build alongside. This is where you make your case.",
     models_label:'// The models',
-    models_intro:"Three ways to structure a partnership. Most start with the middle one — but nothing is set in stone until we've talked.",
+    models_intro:"If we decide to build together, this is how partnerships are usually structured. Which one we land on depends on your stage — we work that out with you.",
     m1_n:'Model 01', m1_t:'Equity only',
     m1_best:'<b>Best for:</b> Early-stage ideas with no revenue yet.',
     m1_b:'You bring the domain expertise and distribution. We build the product. No monthly cost — we take 30–40% equity instead. Pure shared upside, zero billing.',
-    m2_tag:'Recommended', m2_n:'Model 02', m2_t:'Retainer + equity',
+    m2_n:'Model 02', m2_t:'Retainer + equity',
     m2_best:'<b>Best for:</b> Ideas with some validation, or partners who want faster commitment from both sides.',
     m2_b:'A small monthly retainer (NOK 15–25k) covers infrastructure and direct costs. We take 20–35% equity. This is how most of our partnerships are structured.',
     m3_n:'Model 03', m3_t:'Milestone-vested equity',
@@ -408,7 +405,7 @@ const I18N = {
     fit_b3:"You're looking for a freelancer or agency",
     pitch_label:'// Pitch us',
     pitch_h:"Tell us what you're building",
-    pitch_intro:"No deck required. Fill in what you can — we'll take it from there.",
+    pitch_intro:"No deck required. Fill in what you can — we read every pitch ourselves.",
     f_name:'Name', f_email:'Email', f_building:'What are you building?',
     f_sector:'Sector', f_stage:'Stage', f_model:'Which model interests you?',
     f_notes:'Anything else we should know? <span class="opt">(optional)</span>',
@@ -422,15 +419,15 @@ const I18N = {
   },
   no:{
     nav_back:'Tilbake til porteføljen', nav_pitch:'Pitch oss',
-    hero_eyebrow:'Åpen for nye partnere',
+    hero_eyebrow:'Tar imot pitcher nå',
     hero_title:'Bli partner med <span class="grad">NordiTech</span>',
-    hero_lead:'Vi jobber med gründere og bransjeeksperter som har en modig idé og overbevisningen til å gjennomføre den. Velg modellen som passer din fase — eller fortell oss hvor du står, så finner vi ut av det sammen.',
+    hero_lead:'Vi tar inn en håndfull partnere i året — gründere og bransjeeksperter med en modig idé og overbevisningen til å gjennomføre den. Vi tar ikke kunder; vi velger ut noen få å bygge sammen med. Her legger du fram saken din.',
     models_label:'// Modellene',
-    models_intro:'Tre måter å strukturere et partnerskap på. De fleste starter med den i midten — men ingenting er hugget i stein før vi har snakket sammen.',
+    models_intro:'Hvis vi bestemmer oss for å bygge sammen, er det slik partnerskap vanligvis struktureres. Hvilken vi lander på avhenger av fasen din — det finner vi ut sammen med deg.',
     m1_n:'Modell 01', m1_t:'Kun eierandel',
     m1_best:'<b>Passer best for:</b> Tidligfase-idéer uten inntekt ennå.',
     m1_b:'Du bringer bransjekunnskapen og distribusjonen. Vi bygger produktet. Ingen månedlig kostnad — vi tar 30–40 % eierandel i stedet. Ren delt oppside, null fakturering.',
-    m2_tag:'Anbefalt', m2_n:'Modell 02', m2_t:'Honorar + eierandel',
+    m2_n:'Modell 02', m2_t:'Honorar + eierandel',
     m2_best:'<b>Passer best for:</b> Idéer med en viss validering, eller partnere som vil ha raskere forpliktelse fra begge sider.',
     m2_b:'Et lite månedlig honorar (NOK 15–25k) dekker infrastruktur og direkte kostnader. Vi tar 20–35 % eierandel. Slik er de fleste av partnerskapene våre strukturert.',
     m3_n:'Modell 03', m3_t:'Milepæl-opptjent eierandel',
@@ -448,7 +445,7 @@ const I18N = {
     fit_b3:'Du ser etter en frilanser eller et byrå',
     pitch_label:'// Pitch oss',
     pitch_h:'Fortell oss hva du bygger',
-    pitch_intro:'Ingen pitch-deck nødvendig. Fyll inn det du kan — så tar vi det derfra.',
+    pitch_intro:'Ingen pitch-deck nødvendig. Fyll inn det du kan — vi leser hver pitch selv.',
     f_name:'Navn', f_email:'E-post', f_building:'Hva bygger du?',
     f_sector:'Sektor', f_stage:'Fase', f_model:'Hvilken modell er du interessert i?',
     f_notes:'Noe annet vi bør vite? <span class="opt">(valgfritt)</span>',
