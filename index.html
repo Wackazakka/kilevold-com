@@ -1,428 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Norditech AS</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NordiTech AS — AI-native product studio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='10 10 100 100'%3E%3Cdefs%3E%3ClinearGradient id='lvF' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23235FCB'/%3E%3Cstop offset='1' stop-color='%230B2C60'/%3E%3C/linearGradient%3E%3ClinearGradient id='stF' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%231B4FA8'/%3E%3Cstop offset='1' stop-color='%2322C6E8'/%3E%3C/linearGradient%3E%3ClinearGradient id='dgF' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FFFFFF'/%3E%3Cstop offset='0.6' stop-color='%23CFE0F2'/%3E%3Cstop offset='1' stop-color='%2374E6C6'/%3E%3C/linearGradient%3E%3ClinearGradient id='tbT' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%231FA6C8'/%3E%3Cstop offset='0.55' stop-color='%2336C77E'/%3E%3Cstop offset='1' stop-color='%23FFB454'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='24,40 42,40 49,31 31,31' fill='%233F7CEA'/%3E%3Cpolygon points='42,40 42,90 49,81 49,31' fill='%230A2750'/%3E%3Cpolygon points='24,40 42,40 42,90 24,90' fill='url(%23lvF)'/%3E%3Cpolygon points='64,44 82,44 89,35 71,35' fill='%233F7CEA'/%3E%3Cpolygon points='82,44 82,90 89,81 89,35' fill='%230A2750'/%3E%3Cpolygon points='64,44 82,44 82,90 64,90' fill='url(%23stF)'/%3E%3Cpolygon points='30,40 46,40 53,31 37,31' fill='%23EAF2FF'/%3E%3Cpolygon points='30,40 70,90 77,81 37,31' fill='%23AFC4DA'/%3E%3Cpolygon points='30,40 46,40 86,90 70,90' fill='url(%23dgF)'/%3E%3Cpolygon points='40,30 92,30 99,21 47,21' fill='url(%23tbT)'/%3E%3Cpolygon points='92,30 92,44 99,35 99,21' fill='%230E2C66'/%3E%3Cpolygon points='40,30 92,30 92,44 40,44' fill='%23143A86'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#06080F;
+    --ink:#EAF0FB;
+    --ink-soft:#9AA8C2;
+    --ink-faint:#65728C;
+    --line:rgba(255,255,255,0.09);
+    --line-strong:rgba(255,255,255,0.16);
+    --glass:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.014));
+    --panel:linear-gradient(180deg, rgba(23,29,45,.82), rgba(12,16,27,.86));
 
-    body {
-      background-color: #F8F9FA;
-      color: #2C2C2A;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-      min-height: 100vh;
-    }
+    --cyan:#63E6FF;
+    --green:#5EF2A8;
+    --violet:#A78BFA;
+    --amber:#FFB454;
 
-    a { color: inherit; text-decoration: none; }
+    --live:#34E89E;
+    --beta:#5AA8FF;
+    --dev:#FFB454;
 
-    /* ── Accent bar ── */
-    .accent-bar {
-      height: 4px;
-      background: linear-gradient(90deg, #185FA5 0%, #1D9E75 100%);
-    }
+    --r-card:18px;
+    --maxw:1200px;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
 
-    /* ── Header ── */
-    header {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 56px 24px 44px;
-    }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Hanken Grotesk",system-ui,sans-serif; font-weight:450; line-height:1.55;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      margin-bottom: 28px;
-    }
+  /* ---------- Aurora background ---------- */
+  .aurora{position:fixed; inset:-20vh -10vw; z-index:0; pointer-events:none; filter:blur(70px); opacity:.85;}
+  .blob{position:absolute; border-radius:50%; mix-blend-mode:screen; will-change:transform;}
+  .b1{width:46vw; height:46vw; left:-6vw; top:-8vh; background:radial-gradient(circle at 50% 50%, rgba(94,242,168,.55), transparent 62%); animation:drift1 26s ease-in-out infinite;}
+  .b2{width:42vw; height:42vw; right:-8vw; top:-12vh; background:radial-gradient(circle at 50% 50%, rgba(99,230,255,.5), transparent 62%); animation:drift2 32s ease-in-out infinite;}
+  .b3{width:40vw; height:40vw; left:26vw; top:6vh; background:radial-gradient(circle at 50% 50%, rgba(167,139,250,.45), transparent 62%); animation:drift3 38s ease-in-out infinite;}
+  @keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(7vw,8vh) scale(1.18)}}
+  @keyframes drift2{0%,100%{transform:translate(0,0) scale(1.05)}50%{transform:translate(-6vw,10vh) scale(.9)}}
+  @keyframes drift3{0%,100%{transform:translate(0,0) scale(.95)}50%{transform:translate(4vw,-6vh) scale(1.2)}}
+  .grain{position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.05; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .scrim{position:fixed; inset:0; z-index:1; pointer-events:none;
+    background:linear-gradient(180deg, rgba(6,8,15,.15) 0%, rgba(6,8,15,.55) 42%, var(--bg) 78%);}
+  @media(prefers-reduced-motion:reduce){ .blob{animation:none !important;} }
 
-    .logo-text {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #6b7280;
-      letter-spacing: 0.01em;
-    }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 30px; position:relative; z-index:2;}
+  a{color:inherit; text-decoration:none;}
+  .mono{font-family:var(--mono); font-feature-settings:"ss01";}
 
-    h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: #0C447C;
-      line-height: 1.1;
-    }
+  /* ---------- Header ---------- */
+  header.site{position:sticky; top:0; z-index:30; background:rgba(6,8,15,.62); backdrop-filter:saturate(150%) blur(16px); border-bottom:1px solid var(--line);}
+  .nav{display:flex; align-items:center; justify-content:space-between; height:72px;}
+  .brand{display:flex; align-items:center; gap:13px;}
+  .mark{width:48px; height:48px; flex:none;}
+  .brand .name{font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.02em; color:var(--ink); white-space:nowrap;}
+  .brand .name span{color:var(--ink-faint); font-weight:500;}
+  .nav-right{display:flex; align-items:center; gap:16px;}
+  .langswitch{display:inline-flex; align-items:center; background:rgba(255,255,255,.05); border:1px solid var(--line); border-radius:999px; padding:3px; gap:2px;}
+  .langswitch button{font:inherit; font-family:var(--mono); font-weight:600; font-size:12px; letter-spacing:.04em; border:0; background:transparent; color:var(--ink-soft); padding:6px 11px; border-radius:999px; cursor:pointer; line-height:1; transition:all .18s ease;}
+  .langswitch button.active{background:rgba(255,255,255,.10); color:var(--ink); box-shadow:0 0 14px -4px rgba(99,230,255,.5);}
+  .nav-cta{display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:14px; color:#05210f; background:linear-gradient(135deg, var(--green), var(--cyan)); padding:10px 17px; border-radius:999px; transition:transform .18s ease, box-shadow .18s ease; box-shadow:0 0 24px -6px rgba(94,242,168,.6);}
+  .nav-cta:hover{transform:translateY(-1px); box-shadow:0 0 30px -4px rgba(94,242,168,.8);}
+  .nav-cta svg{width:15px; height:15px;}
+  @media(max-width:680px){ .nav-cta span{display:none;} .nav-cta{padding:10px;} }
 
-    .subtitle {
-      margin-top: 8px;
-      font-size: 1rem;
-      color: #378ADD;
-      font-weight: 500;
-    }
+  /* ---------- Hero ---------- */
+  .hero{padding:104px 0 40px;}
+  .eyebrow{display:inline-flex; align-items:center; gap:10px; font-family:var(--mono); font-size:12px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--cyan); padding:7px 15px; border:1px solid rgba(99,230,255,.28); border-radius:999px; background:rgba(99,230,255,.06); margin-bottom:30px; white-space:nowrap;}
+  @media(max-width:680px){ .eyebrow{white-space:normal; text-align:center; line-height:1.6; align-items:flex-start; border-radius:18px;} }
+  .eyebrow .pulse{width:8px; height:8px; border-radius:50%; background:var(--green); box-shadow:0 0 10px 1px var(--green); animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1; transform:scale(1)}50%{opacity:.45; transform:scale(.78)}}
+  h1.hero-title{font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:clamp(52px,9vw,118px); line-height:.92; letter-spacing:-0.04em; margin:0 0 26px;}
+  h1.hero-title .grad{background:linear-gradient(104deg, #BFefff 0%, var(--green) 38%, var(--cyan) 60%, var(--violet) 100%); background-size:200% auto; -webkit-background-clip:text; background-clip:text; color:transparent; animation:shimmer 8s linear infinite;}
+  @keyframes shimmer{to{background-position:200% center;}}
+  h1.hero-title .as{color:var(--ink-faint); font-weight:500; -webkit-text-fill-color:initial;}
+  .lead{font-size:clamp(19px,2.3vw,26px); color:var(--ink); font-weight:450; max-width:680px; margin:0 0 16px; text-wrap:pretty; line-height:1.32;}
+  .subline{font-size:clamp(15px,1.6vw,18px); color:var(--ink-soft); max-width:560px; margin:0 0 34px; text-wrap:pretty;}
+  .meta-row{display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px; font-family:var(--mono); font-size:13px; color:var(--ink-soft); letter-spacing:.02em;}
+  .meta-row b{color:var(--ink); font-weight:600; font-size:15px;}
+  .meta-row .sep{width:5px; height:5px; border-radius:50%; background:var(--cyan); box-shadow:0 0 8px var(--cyan);}
 
-    .tagline {
-      margin-top: 16px;
-      font-size: 1rem;
-      color: #6b7280;
-      max-width: 440px;
-      line-height: 1.6;
-    }
+  /* ---------- About ---------- */
+  .about{margin:64px 0 6px; padding:30px 34px; background:var(--panel); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-card); display:grid; grid-template-columns:170px 1fr; gap:30px; align-items:start; position:relative; overflow:hidden; backdrop-filter:blur(14px); box-shadow:0 12px 40px -20px rgba(0,0,0,.7);}
+  .about::before{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:linear-gradient(180deg, var(--green), var(--cyan), var(--violet));}
+  .about .k{font-family:var(--mono); font-size:12px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--cyan); padding-top:4px;}
+  .about p{margin:0; font-size:17.5px; color:var(--ink); line-height:1.6; max-width:780px; text-wrap:pretty;}
+  @media(max-width:640px){ .about{grid-template-columns:1fr; gap:14px; padding:26px;} }
 
-    /* ── Grid ── */
-    .grid-section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px 80px;
-    }
+  /* ---------- Section head + filter ---------- */
+  .sec-head{display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:18px; margin:78px 0 24px;}
+  .sec-head .label{font-family:var(--mono); font-size:13px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint);}
+  .sec-head .label b{color:var(--ink);}
+  .filters{display:inline-flex; flex-wrap:wrap; gap:6px; background:rgba(255,255,255,.04); border:1px solid var(--line); padding:5px; border-radius:999px;}
+  .filters button{font-family:var(--mono); font-weight:500; font-size:12.5px; letter-spacing:.02em; color:var(--ink-soft); border:0; background:transparent; padding:8px 14px; border-radius:999px; cursor:pointer; display:inline-flex; align-items:center; gap:8px; line-height:1; transition:all .18s ease; white-space:nowrap;}
+  .filters button .cnt{color:var(--ink-faint);}
+  .filters button .swatch{width:8px; height:8px; border-radius:50%; box-shadow:0 0 8px currentColor;}
+  .filters button.active{background:rgba(255,255,255,.10); color:var(--ink); box-shadow:0 0 18px -6px rgba(99,230,255,.5);}
+  .filters button.active .cnt{color:var(--ink-soft);}
 
-    .section-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #9ca3af;
-      margin-bottom: 18px;
-    }
+  /* ---------- Grid + cards ---------- */
+  .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  @media(max-width:940px){ .grid{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:600px){ .grid{grid-template-columns:1fr;} }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
+  .card{position:relative; display:flex; flex-direction:column; background:var(--panel); border:1px solid rgba(255,255,255,.13); border-radius:var(--r-card); padding:25px 25px 23px; overflow:hidden; backdrop-filter:blur(14px); box-shadow:0 14px 40px -20px rgba(0,0,0,.75); transition:transform .24s ease, box-shadow .24s ease, border-color .24s ease;}
+  .card[data-status="live"]{--ac:var(--live);}
+  .card[data-status="beta"]{--ac:var(--beta);}
+  .card[data-status="dev"]{--ac:var(--dev);}
+  .card::before{content:""; position:absolute; top:0; left:24px; right:24px; height:1px; background:linear-gradient(90deg, transparent, var(--ac), transparent); opacity:.6;}
+  .card::after{content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; opacity:0; transition:opacity .3s ease; background:radial-gradient(130% 80% at 50% -12%, color-mix(in srgb, var(--ac) 16%, transparent), transparent 58%);}
+  .card:hover{transform:translateY(-6px); border-color:color-mix(in srgb, var(--ac) 55%, rgba(255,255,255,.13)); box-shadow:0 30px 64px -26px rgba(0,0,0,.9), 0 0 46px -18px var(--ac);}
+  .card:hover::after{opacity:1;}
+  .card.hide{display:none;}
 
-    @media (max-width: 900px) {
-      .grid { grid-template-columns: repeat(2, 1fr); }
-    }
+  .card-top{display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:20px; position:relative; z-index:1;}
+  .icon-tile{width:54px; height:54px; border-radius:15px; flex:none; position:relative; overflow:hidden; background:linear-gradient(150deg, color-mix(in srgb, var(--tile) 88%, #000), color-mix(in srgb, var(--tile) 48%, #000)); box-shadow:0 10px 26px -10px var(--tile), inset 0 1px 0 rgba(255,255,255,.22);}
+  .icon-tile .glyph{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; z-index:1;}
+  .icon-tile svg{width:27px; height:27px; stroke:#fff; stroke-width:1.9; fill:none; stroke-linecap:round; stroke-linejoin:round;}
+  .icon-tile svg.fill{fill:#fff; stroke:none;}
+  .icon-tile img.logo-img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; display:block;}
 
-    @media (max-width: 560px) {
-      .grid { grid-template-columns: 1fr; }
-    }
+  .badge{display:inline-flex; align-items:center; gap:7px; font-family:var(--mono); font-size:11.5px; font-weight:500; letter-spacing:.03em; padding:5px 11px; border-radius:999px; white-space:nowrap; color:var(--ac); background:color-mix(in srgb, var(--ac) 12%, transparent); border:1px solid color-mix(in srgb, var(--ac) 32%, transparent);}
+  .badge .d{width:6px; height:6px; border-radius:50%; background:var(--ac); box-shadow:0 0 8px var(--ac);}
+  .card[data-status="live"] .badge .d{animation:pulse 2.4s ease-in-out infinite;}
 
-    /* ── Card ── */
-    .card {
-      border-radius: 16px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      border: 1.5px solid transparent;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
+  .card h3{font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:22px; letter-spacing:-0.02em; margin:0 0 5px; color:var(--ink); position:relative; z-index:1;}
+  .sector{font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:13px; position:relative; z-index:1;}
+  .card p.desc{margin:0; color:var(--ink-soft); font-size:15px; line-height:1.55; text-wrap:pretty; position:relative; z-index:1;}
+  .card .link{margin-top:auto; padding-top:22px; display:flex; align-items:center; gap:7px; font-family:var(--mono); font-weight:500; font-size:13px; color:var(--ac); transition:gap .18s ease; position:relative; z-index:1;}
+  .card .link:hover{gap:11px;}
+  .card .link svg{width:13px; height:13px; stroke:currentColor; stroke-width:2; fill:none; flex:none;}
+  .card .link .url{overflow-wrap:anywhere; border-bottom:1px solid transparent; transition:border-color .18s ease;}
+  .card .link:hover .url{border-bottom-color:currentColor;}
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.07), 0 12px 28px rgba(0,0,0,0.10);
-    }
+  /* ---------- Contact CTA ---------- */
+  .cta{margin:96px 0 0; padding:60px 52px; border-radius:28px; position:relative; overflow:hidden; border:1px solid var(--line); background:linear-gradient(135deg, rgba(94,242,168,.10), rgba(99,230,255,.06) 45%, rgba(167,139,250,.12));}
+  .cta::before{content:""; position:absolute; inset:0; background:radial-gradient(120% 130% at 100% 0%, rgba(167,139,250,.28), transparent 55%), radial-gradient(120% 130% at 0% 100%, rgba(94,242,168,.22), transparent 55%);}
+  .cta-inner{position:relative; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:28px;}
+  .cta h2{font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:clamp(28px,3.6vw,44px); letter-spacing:-0.03em; margin:0 0 12px; line-height:1.04; color:var(--ink);}
+  .cta p{margin:0; color:var(--ink-soft); font-size:17px; max-width:470px; text-wrap:pretty;}
+  .cta-btn{display:inline-flex; align-items:center; gap:10px; background:linear-gradient(135deg, var(--green), var(--cyan)); color:#05210f; font-weight:700; font-size:15.5px; padding:16px 28px; border-radius:999px; white-space:nowrap; transition:transform .18s ease, box-shadow .18s ease; box-shadow:0 0 34px -8px rgba(94,242,168,.7);}
+  .cta-btn:hover{transform:translateY(-2px); box-shadow:0 0 44px -6px rgba(94,242,168,.9);}
+  .cta-btn svg{width:16px; height:16px; stroke:currentColor; stroke-width:2.2; fill:none;}
 
-    .card-live {
-      background-color: #EAF3DE;
-      border-color: #b4d98a;
-    }
+  /* ---------- Footer ---------- */
+  footer.site{margin-top:40px; border-top:1px solid var(--line); padding:38px 0 60px;}
+  .foot{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;}
+  .foot .l{display:flex; align-items:center; gap:12px;}
+  .foot .mark{width:28px; height:28px;}
+  .foot .co{font-family:"Space Grotesk",sans-serif; font-weight:600; color:var(--ink); font-size:14.5px; white-space:nowrap;}
+  .foot .reg{font-family:var(--mono); color:var(--ink-faint); font-size:12px; letter-spacing:.02em;}
+  .foot a.mail{font-family:var(--mono); color:var(--cyan); font-weight:500; font-size:13.5px; border-bottom:1px solid transparent; transition:border-color .18s;}
+  .foot a.mail:hover{border-bottom-color:var(--cyan);}
 
-    .card-beta {
-      background-color: #E6F1FB;
-      border-color: #9dc8f0;
-    }
-
-    .card-dev {
-      background-color: #F1EFE8;
-      border-color: #d8d5cb;
-    }
-
-    /* ── Card logo ── */
-    .card-logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 4px;
-      background-color: #ffffff;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.10);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .card-logo img {
-      width: 48px;
-      height: 48px;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Fallback icon (Dr. Hanni) */
-    .card-logo-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      margin-bottom: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .card-dev .card-logo-icon {
-      background-color: rgba(107, 114, 128, 0.12);
-      color: #6b7280;
-    }
-
-    .card-logo-icon i { font-size: 22px; }
-
-    /* ── Card content ── */
-    .card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .card-name {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #1a1a18;
-      letter-spacing: -0.01em;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 2px 9px;
-      border-radius: 100px;
-      font-size: 0.68rem;
-      font-weight: 600;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .badge-live {
-      background-color: rgba(29, 158, 117, 0.15);
-      color: #157a5b;
-    }
-
-    .badge-beta {
-      background-color: rgba(24, 95, 165, 0.13);
-      color: #185FA5;
-    }
-
-    .badge-dev {
-      background-color: rgba(107, 114, 128, 0.13);
-      color: #6b7280;
-    }
-
-    .card-desc {
-      font-size: 0.865rem;
-      color: #555550;
-      line-height: 1.6;
-      flex: 1;
-    }
-
-    .card-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-top: 6px;
-      transition: opacity 0.15s;
-    }
-
-    .card-live .card-link { color: #1D9E75; }
-    .card-beta .card-link { color: #185FA5; }
-    .card-dev .card-link { color: #6b7280; }
-
-    .card-link:hover { opacity: 0.75; }
-
-    /* ── Divider / Footer ── */
-    .divider {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-      border: none;
-      border-top: 1px solid #e5e2d9;
-    }
-
-    footer {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 28px 24px;
-      font-size: 0.78rem;
-      color: #9ca3af;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    footer a { color: #378ADD; }
-    footer a:hover { text-decoration: underline; }
-  </style>
+  /* reveal (transform-only — never hides content) */
+  @keyframes ndRise{from{transform:translateY(18px);} to{transform:none;}}
+  .reveal{animation:ndRise .55s cubic-bezier(.22,.61,.36,1) both;}
+  .grid .card:nth-child(1){animation-delay:.02s;} .grid .card:nth-child(2){animation-delay:.07s;}
+  .grid .card:nth-child(3){animation-delay:.12s;} .grid .card:nth-child(4){animation-delay:.17s;}
+  .grid .card:nth-child(5){animation-delay:.22s;} .grid .card:nth-child(6){animation-delay:.27s;}
+  .grid .card:nth-child(7){animation-delay:.32s;} .grid .card:nth-child(8){animation-delay:.37s;}
+  .grid .card:nth-child(9){animation-delay:.42s;}
+  @media(prefers-reduced-motion:reduce){ .reveal{animation:none;} }
+</style>
 </head>
 <body>
 
-  <div class="accent-bar"></div>
+<div class="aurora" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+</div>
+<div class="scrim" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
-  <header>
-    <h1>Norditech AS</h1>
-    <p class="tagline">Building AI-native products across media, finance, and services.</p>
-  </header>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lvF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#235FCB"/><stop offset="1" stop-color="#0B2C60"/></linearGradient>
+    <linearGradient id="stF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B4FA8"/><stop offset="1" stop-color="#22C6E8"/></linearGradient>
+    <linearGradient id="dgF" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.6" stop-color="#CFE0F2"/><stop offset="1" stop-color="#74E6C6"/></linearGradient>
+    <linearGradient id="tbT" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1FA6C8"/><stop offset="0.55" stop-color="#36C77E"/><stop offset="1" stop-color="#FFB454"/></linearGradient>
+    <symbol id="nd-mark" viewBox="10 10 100 100">
+      <polygon points="24,40 42,40 49,31 31,31" fill="#3F7CEA"/>
+      <polygon points="42,40 42,90 49,81 49,31" fill="#0A2750"/>
+      <polygon points="24,40 42,40 42,90 24,90" fill="url(#lvF)"/>
+      <polygon points="64,44 82,44 89,35 71,35" fill="#3F7CEA"/>
+      <polygon points="82,44 82,90 89,81 89,35" fill="#0A2750"/>
+      <polygon points="64,44 82,44 82,90 64,90" fill="url(#stF)"/>
+      <polygon points="30,40 46,40 53,31 37,31" fill="#EAF2FF"/>
+      <polygon points="30,40 70,90 77,81 37,31" fill="#AFC4DA"/>
+      <polygon points="30,40 46,40 86,90 70,90" fill="url(#dgF)"/>
+      <polygon points="40,30 92,30 99,21 47,21" fill="url(#tbT)"/>
+      <polygon points="92,30 92,44 99,35 99,21" fill="#0E2C66"/>
+      <polygon points="40,30 92,30 92,44 40,44" fill="#143A86"/>
+    </symbol>
+  </defs>
+</svg>
 
-  <section class="grid-section">
-    <p class="section-label">Products</p>
-    <div class="grid">
-      <a class="card card-beta" href="https://reelhome.ai" target="_blank" rel="noopener" style="text-decoration:none;">
-        <div class="card-logo">
-          <img src="https://reelhome.ai/brand-kit/reelhome-app-icon.svg" alt="ReelHome logo" loading="lazy" />
-        </div>
-        <div class="card-header">
-          <span class="card-name">ReelHome</span>
-          <span class="badge badge-beta">Beta</span>
-        </div>
-        <p class="card-desc">AI-powered listing video platform for real estate agents. Paste a Finn.no URL — get a professional presenter video in minutes.</p>
-        <span class="card-link">
-          reelhome.ai &nearr;
-        </span>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="NordiTech AS">
+      <svg class="mark" viewBox="0 0 100 100"><use href="#nd-mark"/></svg>
+      <span class="name">NordiTech<span> AS</span></span>
+    </a>
+    <div class="nav-right">
+      <div class="langswitch" role="group" aria-label="Language">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="no">NO</button>
+      </div>
+      <a class="nav-cta" href="mailto:kilevold@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+        <span data-i18n="nav_contact">Contact</span>
       </a>
+    </div>
+  </div>
+</header>
 
+<main id="top">
+  <section class="hero wrap">
+    <span class="eyebrow"><span class="pulse"></span><span data-i18n="eyebrow">AI venture studio · London · New York · Oslo · Saigon</span></span>
+    <h1 class="hero-title"><span class="grad">NordiTech</span><span class="as"> AS</span></h1>
+    <p class="lead" data-i18n="lead">We build AI-native products across media, finance, and services.</p>
+    <p class="subline" data-i18n="subline">We partner on bold ideas and build toward shared ownership — at the speed of AI.</p>
+    <div class="meta-row">
+      <span><b>9</b> <span data-i18n="m_products">products</span></span>
+      <span class="sep"></span>
+      <span><b>4</b> <span data-i18n="m_live">live in production</span></span>
+      <span class="sep"></span>
+      <span><b>3</b> <span data-i18n="m_sectors">sectors</span></span>
+    </div>
 
-
-      <div class="card card-beta">
-        <div class="card-logo">
-          <img src="https://algomaster.ai/icon.svg" alt="AlgoMaster logo" loading="lazy" />
-        </div>
-        <div class="card-header">
-          <span class="card-name">AlgoMaster</span>
-          <span class="badge badge-beta">Beta</span>
-        </div>
-        <p class="card-desc">Algorithmic trading bot connected to Interactive Brokers. Automated strategies for equities and derivatives.</p>
-        <a class="card-link" href="https://algomaster.ai" target="_blank" rel="noopener">
-          algomaster.ai &nearr;
-        </a>
-      </div>
-
-      <div class="card card-live">
-        <div class="card-logo">
-          <img src="https://singlepicker.com/icon.svg" alt="SinglePicker logo" loading="lazy" />
-        </div>
-        <div class="card-header">
-          <span class="card-name">SinglePicker</span>
-          <span class="badge badge-live">Live</span>
-        </div>
-        <p class="card-desc">AI-powered tool helping artists decide which track to release as their next single based on data and context.</p>
-        <a class="card-link" href="https://singlepicker.com" target="_blank" rel="noopener">
-          singlepicker.com &nearr;
-        </a>
-      </div>
-
-      <div class="card card-live">
-        <div class="card-logo">
-          <img src="https://bildeal.ai/icon.svg" alt="BilDeal logo" loading="lazy" />
-        </div>
-        <div class="card-header">
-          <span class="card-name">BilDeal</span>
-          <span class="badge badge-live">Live</span>
-        </div>
-        <p class="card-desc">Used car deal analyzer. Evaluates listings against market data to tell you if you're getting a fair price.</p>
-        <a class="card-link" href="https://bildeal.ai" target="_blank" rel="noopener">
-          bildeal.ai &nearr;
-        </a>
-      </div>
-
-      <div class="card card-beta">
-        <div class="card-logo">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="#0C447C"/>
-            <polygon
-              points="24,8 38.4,16 38.4,32 24,40 9.6,32 9.6,16"
-              stroke="#378ADD"
-              stroke-width="2"
-              stroke-linejoin="round"
-              fill="none"
-            />
-          </svg>
-        </div>
-        <div class="card-header">
-          <span class="card-name">CenterForge</span>
-          <span class="badge badge-beta">Beta</span>
-        </div>
-        <p class="card-desc">AI content platform that generates professional ad material — video and copy — across all social media formats.</p>
-        <a class="card-link" href="https://contentforge-610.netlify.app" target="_blank" rel="noopener">
-          contentforge-610.netlify.app &nearr;
-        </a>
-      </div>
-
-      <div class="card card-dev">
-        <div class="card-logo">
-          <img src="https://summonit.ai/favicon.svg" alt="SummonIt logo" loading="lazy" />
-        </div>
-        <div class="card-header">
-          <span class="card-name">SummonIt</span>
-          <span class="badge badge-dev">In development</span>
-        </div>
-        <p class="card-desc">AI software factory. Describe what you need — SummonIt scopes, builds, and delivers the product.</p>
-        <a class="card-link" href="https://summonit.ai" target="_blank" rel="noopener">
-          summonit.ai &nearr;
-        </a>
-      </div>
-
-      <div class="card card-live">
-        <div class="card-logo">
-          <img src="https://reforhandle.no/handshake-icon.png" alt="Reforhandle logo" loading="lazy" />
-        </div>
-        <div class="card-header">
-          <span class="card-name">Reforhandle</span>
-          <span class="badge badge-live">Live</span>
-        </div>
-        <p class="card-desc">Subscription renegotiation service. Gets you better terms on recurring bills without the hassle of doing it yourself.</p>
-        <a class="card-link" href="https://reforhandle.no" target="_blank" rel="noopener">
-          reforhandle.no &nearr;
-        </a>
-      </div>
-
-      <div class="card card-live">
-        <div class="card-logo-icon" style="background-color: #fef3c7; color: #d97706;">
-          <i class="ti ti-trophy"></i>
-        </div>
-        <div class="card-header">
-          <span class="card-name">A-Pop Showdown</span>
-          <span class="badge badge-live">Live</span>
-        </div>
-        <p class="card-desc">K-pop and A-pop tournament platform. Fans vote head-to-head until one track is crowned the ultimate winner.</p>
-        <a class="card-link" href="https://apop-showdown.netlify.app" target="_blank" rel="noopener">
-          apop-showdown.netlify.app &nearr;
-        </a>
-      </div>
-
-      <div class="card card-dev">
-        <div class="card-logo-icon">
-          <i class="ti ti-brain"></i>
-        </div>
-        <div class="card-header">
-          <span class="card-name">Dr. Hanni</span>
-          <span class="badge badge-dev">In development</span>
-        </div>
-        <p class="card-desc">AI knowledge base and digital clone. Captures expertise, answers questions, and represents knowledge at scale.</p>
-        <div style="display:flex; flex-direction:column; gap:4px; margin-top:6px;">
-          <a class="card-link" href="https://gilded-belekoy-95c777.netlify.app" target="_blank" rel="noopener">
-            gilded-belekoy-95c777.netlify.app &nearr;
-          </a>
-          <a class="card-link" href="https://gilded-belekoy-95c777.netlify.app/test-import.html" target="_blank" rel="noopener">
-            /test-import.html &nearr;
-          </a>
-        </div>
-      </div>
-
+    <div class="about reveal">
+      <div class="k" data-i18n="about_k">// About</div>
+      <p data-i18n="about_p">NordiTech AS is a Scandinavian-founded AI venture studio. We partner with founders and businesses on bold ideas, then design, build, and ship the product — developing toward shared ownership instead of billing by the hour. Fast cycles, real launches, aligned incentives.</p>
     </div>
   </section>
 
-  <hr class="divider" />
+  <section class="wrap">
+    <div class="sec-head">
+      <span class="label" data-i18n="products_label">// Products <b>[09]</b></span>
+      <div class="filters" role="group" aria-label="Filter by status">
+        <button data-filter="all" class="active"><span data-i18n="f_all">All</span> <span class="cnt">9</span></button>
+        <button data-filter="live" style="--c:var(--live)"><span class="swatch" style="color:var(--live)"></span><span data-i18n="f_live">Live</span> <span class="cnt">4</span></button>
+        <button data-filter="beta" style="--c:var(--beta)"><span class="swatch" style="color:var(--beta)"></span><span data-i18n="f_beta">Beta</span> <span class="cnt">2</span></button>
+        <button data-filter="dev" style="--c:var(--dev)"><span class="swatch" style="color:var(--dev)"></span><span data-i18n="f_dev">In development</span> <span class="cnt">3</span></button>
+      </div>
+    </div>
 
-  <footer>
-    <span>Norditech AS</span>
-    <a href="mailto:kilevold@gmail.com">kilevold@gmail.com</a>
-  </footer>
+    <div class="grid" id="grid"></div>
+  </section>
 
+  <section class="wrap">
+    <div class="cta reveal">
+      <div class="cta-inner">
+        <div>
+          <h2 data-i18n="cta_h">Got something worth building?</h2>
+          <p data-i18n="cta_p">We partner on bold ideas and build toward shared ownership — from first sketch to live in production. Tell us what you're building.</p>
+        </div>
+        <a class="cta-btn" href="mailto:kilevold@gmail.com">
+          <span data-i18n="cta_btn">Get in touch</span>
+          <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot">
+    <div class="l">
+      <svg class="mark" viewBox="0 0 100 100"><use href="#nd-mark"/></svg>
+      <span class="co">NordiTech AS</span>
+      <span class="reg" data-i18n="foot_reg">// Oslo, Norway</span>
+    </div>
+    <a class="mail" href="mailto:kilevold@gmail.com">kilevold@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+/* ---------- Fallback glyphs (shown until real product logos exist in product-icons/) ---------- */
+const ICONS = {
+  reel:'<svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/><path d="m10 12.5 4 2.5-4 2.5z" class="fill"/></svg>',
+  algo:'<svg viewBox="0 0 24 24"><path d="M3 21h18"/><rect x="5" y="9" width="3" height="8" rx="1"/><path d="M6.5 9V6M6.5 17v2"/><rect x="14" y="5" width="3" height="9" rx="1"/><path d="M15.5 5V3M15.5 14v3"/></svg>',
+  vinyl:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="0.6" class="fill"/></svg>',
+  gauge:'<svg viewBox="0 0 24 24"><path d="M4 18a8 8 0 1 1 16 0"/><path d="m12 14 4-4"/><circle cx="12" cy="18" r="1.1" class="fill"/></svg>',
+  hex:'<svg viewBox="0 0 24 24"><path d="M12 3 20 7.5v9L12 21 4 16.5v-9z"/><path d="M12 8 16 10.2v4.4L12 16.8 8 14.6v-4.4z"/></svg>',
+  bolt:'<svg viewBox="0 0 24 24"><path d="M13 3 5 13h5l-1 8 8-10h-5z" class="fill"/></svg>',
+  renew:'<svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>',
+  trophy:'<svg viewBox="0 0 24 24"><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/><path d="M10 14h4M9 20h6M12 14v6"/></svg>',
+  brain:'<svg viewBox="0 0 24 24"><path d="M12 5a3 3 0 0 0-5.6-1.5A2.8 2.8 0 0 0 4 8a3 3 0 0 0 .5 4.5A3 3 0 0 0 7 18a3 3 0 0 0 5 1z"/><path d="M12 5a3 3 0 0 1 5.6-1.5A2.8 2.8 0 0 1 20 8a3 3 0 0 1-.5 4.5A3 3 0 0 1 17 18a3 3 0 0 1-5 1z"/><path d="M12 5v14"/></svg>'
+};
+
+const PRODUCTS = [
+  { name:'ReelHome', slug:'reelhome', status:'live', icon:'reel', tile:'#46C26B',
+    sector:{en:'Media',no:'Media'},
+    desc:{en:'AI-powered listing video platform for real estate agents. Paste a Finn.no URL — get a professional presenter video in minutes.',
+          no:'AI-drevet videoplattform for eiendomsmeglere. Lim inn en Finn.no-lenke — få en profesjonell presentasjonsvideo på minutter.'},
+    label:'reelhome.ai', url:'https://reelhome.ai' },
+
+  { name:'AlgoMaster', slug:'algomaster', status:'beta', icon:'algo', tile:'#3AA0FF',
+    sector:{en:'Finance',no:'Finans'},
+    desc:{en:'Algorithmic trading bot connected to Interactive Brokers. Automated strategies for equities and derivatives.',
+          no:'Algoritmisk handelsbot koblet til Interactive Brokers. Automatiserte strategier for aksjer og derivater.'},
+    label:'algomaster.ai', url:'https://algomaster.ai' },
+
+  { name:'SinglePicker', slug:'singlepicker', status:'live', icon:'vinyl', tile:'#8B6CFF',
+    sector:{en:'Media',no:'Media'},
+    desc:{en:'AI-powered tool helping artists decide which track to release as their next single, based on data and context.',
+          no:'AI-verktøy som hjelper artister å velge hvilken låt de skal slippe som neste singel — basert på data og kontekst.'},
+    label:'singlepicker.com', url:'https://singlepicker.com' },
+
+  { name:'BilDeal', slug:'bildeal', status:'live', icon:'gauge', tile:'#FF8A4C',
+    sector:{en:'Finance',no:'Finans'},
+    desc:{en:"Used car deal analyzer. Evaluates listings against market data to tell you if you're getting a fair price.",
+          no:'Analyse av bruktbilannonser. Vurderer annonser mot markedsdata for å si om du får en rettferdig pris.'},
+    label:'bildeal.ai', url:'https://bildeal.ai' },
+
+  { name:'CenterForge', slug:'centerforge', status:'beta', icon:'hex', tile:'#3B7DF0',
+    sector:{en:'Media',no:'Media'},
+    desc:{en:'AI content platform that generates professional ad material — video and copy — across all social media formats.',
+          no:'AI-innholdsplattform som lager profesjonelt annonsemateriell — video og tekst — for alle sosiale medier-formater.'},
+    label:'contentforge-610.netlify.app', url:'https://contentforge-610.netlify.app' },
+
+  { name:'SummonIt', slug:'summonit', status:'dev', icon:'bolt', tile:'#B25CFF',
+    sector:{en:'Services',no:'Tjenester'},
+    desc:{en:'AI software factory. Describe what you need — SummonIt scopes, builds, and delivers the product.',
+          no:'AI-programvarefabrikk. Beskriv hva du trenger — SummonIt definerer, bygger og leverer produktet.'},
+    label:'summonit.ai', url:'https://summonit.ai' },
+
+  { name:'Reforhandle', slug:'reforhandle', status:'live', icon:'renew', tile:'#2FD89B',
+    sector:{en:'Finance',no:'Finans'},
+    desc:{en:'Subscription renegotiation service. Gets you better terms on recurring bills without the hassle of doing it yourself.',
+          no:'Reforhandlingstjeneste for abonnement. Gir deg bedre vilkår på faste regninger uten styret med å gjøre det selv.'},
+    label:'reforhandle.no', url:'https://reforhandle.no' },
+
+  { name:'A-Pop Showdown', slug:'apop-showdown', status:'dev', icon:'trophy', tile:'#FFC24B',
+    sector:{en:'Media',no:'Media'},
+    desc:{en:'K-pop and A-pop tournament platform. Fans vote head-to-head until one track is crowned the ultimate winner.',
+          no:'Turneringsplattform for K-pop og A-pop. Fans stemmer head-to-head til én låt kåres som den ultimate vinneren.'},
+    label:'apop-showdown.netlify.app', url:'https://apop-showdown.netlify.app' },
+
+  { name:'Dr. Hanni', slug:'drhanni', status:'dev', icon:'brain', tile:'#62D3E8',
+    sector:{en:'Services',no:'Tjenester'},
+    desc:{en:'AI knowledge base and digital clone. Captures expertise, answers questions, and represents knowledge at scale.',
+          no:'AI-kunnskapsbase og digital klon. Fanger ekspertise, svarer på spørsmål og representerer kunnskap i stor skala.'},
+    label:'gilded-belekoy-95c777.netlify.app/test-import.html', url:'https://gilded-belekoy-95c777.netlify.app/test-import.html' }
+];
+
+const STATUS_LABEL = {
+  live:{en:'Live',no:'Live'}, beta:{en:'Beta',no:'Beta'}, dev:{en:'In development',no:'Under utvikling'}
+};
+
+const I18N = {
+  en:{ nav_contact:'Contact', eyebrow:'AI venture studio · London · New York · Oslo · Saigon',
+       lead:'We build AI-native products across media, finance, and services.',
+       subline:'We partner on bold ideas and build toward shared ownership — at the speed of AI.',
+       m_products:'products', m_live:'live in production', m_sectors:'sectors',
+       about_k:'// About',
+       about_p:'NordiTech AS is a Scandinavian-founded AI venture studio. We partner with founders and businesses on bold ideas, then design, build, and ship the product — developing toward shared ownership instead of billing by the hour. Fast cycles, real launches, aligned incentives.',
+       products_label:'// Products <b>[09]</b>', f_all:'All', f_live:'Live', f_beta:'Beta', f_dev:'In development',
+       cta_h:'Got something worth building?',
+       cta_p:"We partner on bold ideas and build toward shared ownership — from first sketch to live in production. Tell us what you're building.",
+       cta_btn:'Get in touch', foot_reg:'// Oslo, Norway' },
+  no:{ nav_contact:'Kontakt', eyebrow:'AI-venturestudio · London · New York · Oslo · Saigon',
+       lead:'Vi bygger AI-native produkter innen media, finans og tjenester.',
+       subline:'Vi går inn som partner i sterke idéer og bygger mot eierskap — i AI-fart.',
+       m_products:'produkter', m_live:'i produksjon', m_sectors:'sektorer',
+       about_k:'// Om oss',
+       about_p:'NordiTech AS er et skandinavisk-grunnlagt AI-venturestudio. Vi går inn som partner i sterke idéer sammen med gründere og bedrifter, og designer, bygger og lanserer produktet — vi utvikler mot eierskap framfor å fakturere per time. Korte sykluser, ekte lanseringer, felles interesser.',
+       products_label:'// Produkter <b>[09]</b>', f_all:'Alle', f_live:'Live', f_beta:'Beta', f_dev:'Under utvikling',
+       cta_h:'Har du noe som er verdt å bygge?',
+       cta_p:'Vi går inn som partner i sterke idéer og bygger mot eierskap — fra første skisse til lansering. Fortell oss hva du bygger.',
+       cta_btn:'Ta kontakt', foot_reg:'// Oslo, Norge' }
+};
+
+const grid = document.getElementById('grid');
+let LANG = localStorage.getItem('nd_lang') || 'en';
+
+function renderCards(){
+  grid.innerHTML = PRODUCTS.map(p => {
+    const sl = STATUS_LABEL[p.status][LANG];
+    return `
+    <article class="card reveal" data-status="${p.status}">
+      <div class="card-top">
+        <div class="icon-tile" style="--tile:${p.tile}">
+          <span class="glyph">${ICONS[p.icon]}</span>
+          <img class="logo-img" src="product-icons/${p.slug}.png" alt="${p.name} logo" loading="lazy" onerror="this.remove()" />
+        </div>
+        <span class="badge"><span class="d"></span>${sl}</span>
+      </div>
+      <h3>${p.name}</h3>
+      <div class="sector">${p.sector[LANG]}</div>
+      <p class="desc">${p.desc[LANG]}</p>
+      <a class="link" href="${p.url}" target="_blank" rel="noopener">
+        <span class="url">${p.label}</span>
+        <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+      </a>
+    </article>`;
+  }).join('');
+  applyFilter(currentFilter);
+}
+
+function applyLang(lang){
+  LANG = lang;
+  localStorage.setItem('nd_lang', lang);
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.getAttribute('data-i18n');
+    if(I18N[lang][k]!==undefined) el.innerHTML = I18N[lang][k];
+  });
+  document.querySelectorAll('.langswitch button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+  renderCards();
+}
+document.querySelectorAll('.langswitch button').forEach(b=>{
+  b.addEventListener('click', ()=>applyLang(b.dataset.lang));
+});
+
+let currentFilter = 'all';
+function applyFilter(f){
+  currentFilter = f;
+  document.querySelectorAll('.card').forEach(c=>{
+    c.classList.toggle('hide', f!=='all' && c.dataset.status!==f);
+  });
+  document.querySelectorAll('.filters button').forEach(b=>b.classList.toggle('active', b.dataset.filter===f));
+}
+document.querySelectorAll('.filters button').forEach(b=>{
+  b.addEventListener('click', ()=>applyFilter(b.dataset.filter));
+});
+
+applyLang(LANG);
+</script>
 </body>
 </html>
