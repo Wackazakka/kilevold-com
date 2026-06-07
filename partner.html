@@ -158,6 +158,13 @@
   .pitch-success h3{font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:25px; letter-spacing:-.02em; margin:0 0 9px; color:var(--ink);}
   .pitch-success p{color:var(--ink-soft); font-size:16.5px; margin:0;}
 
+  /* ---------- Confidentiality note ---------- */
+  .confnote{display:flex; gap:14px; align-items:flex-start; max-width:780px; margin:0 0 20px; padding:16px 18px; background:color-mix(in srgb,var(--green) 7%, rgba(255,255,255,.02)); border:1px solid color-mix(in srgb,var(--green) 24%, var(--line)); border-radius:14px;}
+  .confnote .ic{flex:none; width:30px; height:30px; border-radius:9px; display:flex; align-items:center; justify-content:center; background:color-mix(in srgb,var(--green) 16%, transparent);}
+  .confnote .ic svg{width:17px; height:17px; stroke:var(--green); stroke-width:2; fill:none; stroke-linecap:round; stroke-linejoin:round;}
+  .confnote .txt{margin:0; font-size:14.5px; color:var(--ink-soft); line-height:1.55; text-wrap:pretty;}
+  .confnote .txt b{color:var(--ink); font-weight:600;}
+
   /* ---------- Footer ---------- */
   footer.site{margin-top:80px; border-top:1px solid var(--line); padding:38px 0 60px;}
   .foot{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;}
@@ -289,6 +296,11 @@
     <div class="sec-head"><span class="label" data-i18n="pitch_label">// Pitch us</span></div>
     <p class="sec-intro" style="margin-bottom:6px;"><span data-i18n="pitch_h" style="display:block; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(24px,3vw,32px); letter-spacing:-.02em; color:var(--ink); margin-bottom:10px; line-height:1.1;">Tell us what you want to build</span><span data-i18n="pitch_intro">No deck required. Fill in what you can — we read every pitch ourselves.</span></p>
 
+    <div class="confnote reveal">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+      <p class="txt" data-i18n="conf_note"><b>Your idea stays yours.</b> We make money by building <em>with</em> you for equity — not by taking ideas elsewhere. Everything you share here stays inside NordiTech, and you don't need to reveal every detail yet — just enough for us to see if we're a fit. Want a mutual NDA before we go deeper? Just ask, and we'll sign one before any detailed conversation.</p>
+    </div>
+
     <div class="pitch reveal">
       <form name="partner-pitch" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="pitchForm">
         <input type="hidden" name="form-name" value="partner-pitch" />
@@ -406,6 +418,7 @@ const I18N = {
     pitch_label:'// Pitch us',
     pitch_h:"Tell us what you want to build",
     pitch_intro:"No deck required. Fill in what you can — we read every pitch ourselves.",
+    conf_note:"<b>Your idea stays yours.</b> We make money by building <em>with</em> you for equity — not by taking ideas elsewhere. Everything you share here stays inside NordiTech, and you don't need to reveal every detail yet — just enough for us to see if we're a fit. Want a mutual NDA before we go deeper? Just ask, and we'll sign one before any detailed conversation.",
     f_name:'Name', f_email:'Email', f_building:'What are you building?',
     f_sector:'Sector', f_stage:'Stage', f_model:'Which model interests you?',
     f_notes:'Anything else we should know? <span class="opt">(optional)</span>',
@@ -446,6 +459,7 @@ const I18N = {
     pitch_label:'// Pitch oss',
     pitch_h:'Fortell oss hva du ønsker å bygge',
     pitch_intro:'Ingen pitch-deck nødvendig. Fyll inn det du kan — vi leser hver pitch selv.',
+    conf_note:'<b>Idéen din forblir din.</b> Vi tjener penger på å bygge <em>sammen med</em> deg for eierandel — ikke på å ta idéer videre andre steder. Alt du deler her holdes internt i NordiTech, og du trenger ikke avsløre alle detaljene ennå — bare nok til at vi ser om vi passer sammen. Vil du ha en gjensidig NDA før vi går i dybden? Bare si fra, så signerer vi en før vi tar noen detaljert samtale.',
     f_name:'Navn', f_email:'E-post', f_building:'Hva bygger du?',
     f_sector:'Sektor', f_stage:'Fase', f_model:'Hvilken modell er du interessert i?',
     f_notes:'Noe annet vi bør vite? <span class="opt">(valgfritt)</span>',
