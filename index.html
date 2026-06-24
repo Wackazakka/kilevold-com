@@ -389,7 +389,7 @@ const PRODUCTS = [
     sector:{en:'AI tools',no:'AI-verktøy'},
     desc:{en:'AI knowledge base and digital clone. Captures expertise, answers questions, and represents knowledge at scale.',
           no:'AI-kunnskapsbase og digital klone. Fanger ekspertise, svarer på spørsmål og representerer kunnskap i stor skala.'},
-    label:'gilded-belekoy-95c777.netlify.app/test-import.html', url:'https://gilded-belekoy-95c777.netlify.app/test-import.html' }
+    statusLabel:{en:'Coming soon',no:'Kommer snart'} }
 ];
 
 const STATUS_LABEL = {
@@ -433,7 +433,7 @@ let LANG = localStorage.getItem('nd_lang') || 'en';
 
 function renderCards(){
   grid.innerHTML = PRODUCTS.map(p => {
-    const sl = STATUS_LABEL[p.status][LANG];
+    const sl = p.statusLabel ? p.statusLabel[LANG] : STATUS_LABEL[p.status][LANG];
     return `
     <article class="card reveal" data-status="${p.status}">
       <div class="card-top">
@@ -448,7 +448,7 @@ function renderCards(){
       <p class="desc">${p.desc[LANG]}</p>
       ${p.url
         ? `<a class="link" href="${p.url}" target="_blank" rel="noopener"><span class="url">${p.label}</span><svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>`
-        : `<span class="link link-static">${PRIVATE_LABEL[LANG]}</span>`}
+        : (p.label ? `<span class="link link-static">${p.label}</span>` : '')}
     </article>`;
   }).join('');
   applyFilter(currentFilter);
