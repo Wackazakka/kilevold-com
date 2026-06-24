@@ -262,22 +262,13 @@
     <h1 class="hero-title"><span class="grad">NordiTech</span></h1>
     <p class="lead" data-i18n="lead">We build products across media, finance, and AI tools.</p>
     <p class="subline" data-i18n="subline">We partner on bold ideas and build toward shared ownership — at the speed of AI.</p>
-    <div class="meta-row">
-      <span><b>9</b> <span data-i18n="m_products">products</span></span>
-      <span class="sep"></span>
-      <span><b>4</b> <span data-i18n="m_live">live in production</span></span>
-      <span class="sep"></span>
-      <span><b>3</b> <span data-i18n="m_sectors">sectors</span></span>
-      <span class="sep"></span>
-      <span><b>0</b> <span data-i18n="m_invoices">hourly invoices</span></span>
-    </div>
     </div>
     <div class="hero-logos" id="hero-logos" aria-label="Products"></div>
     </div>
 
     <div class="about reveal">
       <div class="k" data-i18n="about_k">// About</div>
-      <p data-i18n="about_p">NordiTech AS is a Scandinavian-founded AI venture studio. We partner with founders and businesses on bold ideas, then design, build, and ship the product — developing toward shared ownership instead of billing by the hour. Fast cycles, real launches, aligned incentives. We sit at the intersection of developer, angel investor, and incubator. That portfolio is our pitch.</p>
+      <p data-i18n="about_p">NordiTech AS is a Scandinavian-founded AI venture studio. We partner with founders and businesses on bold ideas, then design, build, and ship the product — developing toward shared ownership instead of billing by the hour. Fast cycles, real launches, aligned incentives. We sit at the intersection of developer, angel investor, and incubator. Below you can see both finished projects and products in development.</p>
     </div>
   </section>
 
@@ -373,7 +364,7 @@ const PRODUCTS = [
   { name:'CenterForge', slug:'centerforge', status:'beta', icon:'hex', tile:'#3B7DF0',
     sector:{en:'Media',no:'Media'},
     desc:{en:'AI content platform that generates professional ad material — video and copy — across all social media formats.',
-          no:'AI-innholdsplattform som lager profesjonelt annonsemateriell — video og tekst — for alle sosiale medier-formater.'},
+          no:'AI-innholdsplattform som lager profesjonelt annonsemateriell — video og tekst — for alle sosiale medie-formater.'},
     label:'contentforge-610.netlify.app', url:'https://contentforge-610.netlify.app' },
 
   { name:'SummonIt', slug:'summonit', status:'dev', icon:'bolt', tile:'#B25CFF',
@@ -390,14 +381,14 @@ const PRODUCTS = [
 
   { name:'A-Pop Showdown', slug:'apop-showdown', status:'dev', icon:'trophy', tile:'#FFC24B',
     sector:{en:'Media',no:'Media'},
-    desc:{en:'K-pop and A-pop tournament platform. Fans vote head-to-head until one track is crowned the ultimate winner.',
-          no:'Turneringsplattform for K-pop og A-pop. Fans stemmer head-to-head til én låt kåres som den ultimate vinneren.'},
+    desc:{en:'A-Pop (Artificial Pop) tournament platform. Fans vote head-to-head until one track is crowned the ultimate winner.',
+          no:'Turneringsplattform for A-Pop (Artificial Pop). Fans stemmer head-to-head til én låt kåres som den ultimate vinneren.'},
     label:'apop-showdown.netlify.app', url:'https://apop-showdown.netlify.app' },
 
   { name:'Dr. Hanni', slug:'drhanni', status:'dev', icon:'brain', tile:'#62D3E8',
     sector:{en:'AI tools',no:'AI-verktøy'},
     desc:{en:'AI knowledge base and digital clone. Captures expertise, answers questions, and represents knowledge at scale.',
-          no:'AI-kunnskapsbase og digital klon. Fanger ekspertise, svarer på spørsmål og representerer kunnskap i stor skala.'},
+          no:'AI-kunnskapsbase og digital klone. Fanger ekspertise, svarer på spørsmål og representerer kunnskap i stor skala.'},
     label:'gilded-belekoy-95c777.netlify.app/test-import.html', url:'https://gilded-belekoy-95c777.netlify.app/test-import.html' }
 ];
 
@@ -412,7 +403,7 @@ const I18N = {
        subline:'We partner on bold ideas and build toward shared ownership — at the speed of AI.',
        m_products:'products', m_live:'live in production', m_sectors:'sectors', m_invoices:'hourly invoices',
        about_k:'// About',
-       about_p:"NordiTech AS is a Scandinavian-founded AI venture studio. We partner with founders and businesses on bold ideas, then design, build, and ship the product — developing toward shared ownership instead of billing by the hour. Fast cycles, real launches, aligned incentives. We sit at the intersection of developer, angel investor, and incubator. That portfolio is our pitch.",
+       about_p:"NordiTech AS is a Scandinavian-founded AI venture studio. We partner with founders and businesses on bold ideas, then design, build, and ship the product — developing toward shared ownership instead of billing by the hour. Fast cycles, real launches, aligned incentives. We sit at the intersection of developer, angel investor, and incubator. Below you can see both finished projects and products in development.",
        hw_label:'// How we work',
        hw1_t:'You bring the idea', hw1_b:"Domain expertise and distribution. You don't need to be technical — you need to know the problem space better than anyone.",
        hw2_t:'We build the product', hw2_b:'Design, engineering, and AI integration. No hourly invoices, no scope creep. A small monthly retainer (NOK 15–25k) covers infrastructure and direct costs.',
@@ -426,9 +417,9 @@ const I18N = {
        subline:'Vi går inn som partner i sterke idéer og bygger mot eierskap — i AI-fart.',
        m_products:'produkter', m_live:'i produksjon', m_sectors:'sektorer', m_invoices:'timefakturaer',
        about_k:'// Om oss',
-       about_p:'NordiTech AS er et skandinavisk-grunnlagt AI-venturestudio. Vi går inn som partner i sterke idéer sammen med gründere og bedrifter. Vi designer, bygger og lanserer produktet og utvikler mot eierskap framfor å fakturere per time. Korte sykluser, ekte lanseringer, felles interesser. Vi sitter i skjæringspunktet mellom utvikler, engelinvestor og inkubator. Porteføljen er pitchen vår.',
+       about_p:'NordiTech AS er et skandinavisk-grunnlagt AI-venturestudio. Vi går inn som partner i sterke idéer sammen med gründere og bedrifter. Vi designer, bygger og lanserer produktet og utvikler mot eierskap framfor å fakturere per time. Korte sykluser, ekte lanseringer, felles interesser. Vi sitter i skjæringspunktet mellom utvikler, engelinvestor og inkubator. Under kan du se både ferdige prosjekter og produkter under utvikling.',
        hw_label:'// Slik jobber vi',
-       hw1_t:'Du kommer med idéen', hw1_b:'Bransjekunnskap og distribusjon. Du trenger ikke være tekniker — du trenger å kjenne problemområdet bedre enn noen.',
+       hw1_t:'Du kommer med idéen', hw1_b:'Du bidrar med bransjekunnskap og distribusjon. Du trenger ikke være tekniker — du trenger å kjenne problemområdet bedre enn noen.',
        hw2_t:'Vi bygger produktet', hw2_b:'Design, utvikling og AI-integrasjon. Ingen timefakturaer, ingen scope creep. Et lite månedlig honorar (NOK 15–25k) dekker infrastruktur og direkte kostnader.',
        hw3_t:'Vi skalerer det sammen', hw3_b:'Eierandel opptjenes mot milepæler — typisk 20–35% til NordiTech. Du eier merkevaren, kundene og domenet. Vi eier oppsiden sammen.',
        products_label:'// Produkter <b>[09]</b>', f_all:'Alle', f_live:'Live', f_beta:'Beta', f_dev:'Under utvikling',
