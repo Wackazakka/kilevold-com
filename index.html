@@ -200,7 +200,9 @@
   .grid .card:nth-child(3){animation-delay:.12s;} .grid .card:nth-child(4){animation-delay:.17s;}
   .grid .card:nth-child(5){animation-delay:.22s;} .grid .card:nth-child(6){animation-delay:.27s;}
   .grid .card:nth-child(7){animation-delay:.32s;} .grid .card:nth-child(8){animation-delay:.37s;}
-  .grid .card:nth-child(9){animation-delay:.42s;}
+  .grid .card:nth-child(9){animation-delay:.42s;} .grid .card:nth-child(10){animation-delay:.47s;}
+  .grid .card:nth-child(11){animation-delay:.52s;} .grid .card:nth-child(12){animation-delay:.57s;}
+  .grid .card:nth-child(13){animation-delay:.62s;}
   @media(prefers-reduced-motion:reduce){ .reveal{animation:none;} }
 </style>
 </head>
@@ -274,12 +276,12 @@
 
   <section class="wrap">
     <div class="sec-head">
-      <span class="label" data-i18n="products_label">// Products <b>[11]</b></span>
+      <span class="label" data-i18n="products_label">// Products <b>[13]</b></span>
       <div class="filters" role="group" aria-label="Filter by status">
-        <button data-filter="all" class="active"><span data-i18n="f_all">All</span> <span class="cnt">11</span></button>
-        <button data-filter="live" style="--c:var(--live)"><span class="swatch" style="color:var(--live)"></span><span data-i18n="f_live">Live</span> <span class="cnt">5</span></button>
+        <button data-filter="all" class="active"><span data-i18n="f_all">All</span> <span class="cnt">13</span></button>
+        <button data-filter="live" style="--c:var(--live)"><span class="swatch" style="color:var(--live)"></span><span data-i18n="f_live">Live</span> <span class="cnt">6</span></button>
         <button data-filter="beta" style="--c:var(--beta)"><span class="swatch" style="color:var(--beta)"></span><span data-i18n="f_beta">Beta</span> <span class="cnt">2</span></button>
-        <button data-filter="dev" style="--c:var(--dev)"><span class="swatch" style="color:var(--dev)"></span><span data-i18n="f_dev">In development</span> <span class="cnt">4</span></button>
+        <button data-filter="dev" style="--c:var(--dev)"><span class="swatch" style="color:var(--dev)"></span><span data-i18n="f_dev">In development</span> <span class="cnt">5</span></button>
       </div>
     </div>
 
@@ -335,7 +337,9 @@ const ICONS = {
   trophy:'<svg viewBox="0 0 24 24"><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/><path d="M10 14h4M9 20h6M12 14v6"/></svg>',
   brain:'<svg viewBox="0 0 24 24"><path d="M12 5a3 3 0 0 0-5.6-1.5A2.8 2.8 0 0 0 4 8a3 3 0 0 0 .5 4.5A3 3 0 0 0 7 18a3 3 0 0 0 5 1z"/><path d="M12 5a3 3 0 0 1 5.6-1.5A2.8 2.8 0 0 1 20 8a3 3 0 0 1-.5 4.5A3 3 0 0 1 17 18a3 3 0 0 1-5 1z"/><path d="M12 5v14"/></svg>',
   trend:'<svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 3 6-7"/><path d="M16 8h5v5"/></svg>',
-  smile:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5a4 4 0 0 0 7 0"/><circle cx="9" cy="10" r="1" class="fill"/><circle cx="15" cy="10" r="1" class="fill"/></svg>'
+  smile:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5a4 4 0 0 0 7 0"/><circle cx="9" cy="10" r="1" class="fill"/><circle cx="15" cy="10" r="1" class="fill"/></svg>',
+  planet:'<svg viewBox="0 0 24 24"><circle cx="11" cy="11.5" r="6"/><ellipse cx="11" cy="11.5" rx="10.5" ry="3.6" transform="rotate(-24 11 11.5)"/><path d="M19 3.2l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z" class="fill"/></svg>',
+  voicebook:'<svg viewBox="0 0 24 24"><path d="M4 5.2A2.2 2.2 0 0 1 6.2 3H11v16H6.2A2.2 2.2 0 0 0 4 21.2z"/><path d="M11 19h5.4"/><path d="M15 7.5v4M18 5.5v8M21 8v3"/></svg>'
 };
 
 const PRODUCTS = [
@@ -403,7 +407,19 @@ const PRODUCTS = [
     sector:{en:'Media',no:'Media'},
     desc:{en:'Viral novelty service — upload a selfie and get a face-swapped video of yourself in Norway’s «we row for Norway» clip in seconds.',
           no:'Viral novelty-tjeneste — last opp en selfie og få en ansiktsbyttet video av deg selv i det norske «vi ror for Norge»-klippet på sekunder.'},
-    label:'ronaa.norditech.io', url:'https://ronaa.norditech.io' }
+    label:'ronaa.norditech.io', url:'https://ronaa.norditech.io' },
+
+  { name:'YoPlanets!', slug:'yoplanets', status:'live', icon:'planet', tile:'#E0559B',
+    sector:{en:'Consumer',no:'Forbruker'},
+    desc:{en:'Astrological relationship playground. Real Swiss Ephemeris charts score any two people across eight dimensions — and the pair gets an AI-imagined child of their own.',
+          no:'Astrologisk relasjonslekeplass. Ekte horoskop (Swiss Ephemeris) scorer to mennesker på åtte dimensjoner — og paret får sitt eget AI-forestilte barn.'},
+    label:'yoplanets.com', url:'https://yoplanets.com' },
+
+  { name:'Stemmearven', slug:'stemmearven', status:'dev', icon:'voicebook', tile:'#2E9C8E',
+    sector:{en:'Media',no:'Media'},
+    desc:{en:'Norwegian classics and fairy tales read aloud in a cloned family voice — grandma reading, not a stranger. Chapter two, Minnearven, interviews the eldest in the family and preserves their stories as a living memory bank.',
+          no:'Norske klassikere og eventyr lest av en klonet familiestemme — farmor leser, ikke en fremmed. Kapittel to, Minnearven, intervjuer den eldste i familien og bevarer historiene som en levende minnebank.'},
+    label:'stemmearven.netlify.app', url:'https://stemmearven.netlify.app' }
 ];
 
 const STATUS_LABEL = {
@@ -422,7 +438,7 @@ const I18N = {
        hw1_t:'You bring the idea', hw1_b:"Domain expertise and distribution. You don't need to be technical — you need to know the problem space better than anyone.",
        hw2_t:'We build the product', hw2_b:'Design, engineering, and AI integration. No hourly invoices, no scope creep. A small monthly retainer (NOK 15–25k) covers infrastructure and direct costs.',
        hw3_t:'We grow it together', hw3_b:'Equity vests against milestones — typically 20–35% to NordiTech. You own the brand, customers, and domain. We own the upside together.',
-       products_label:'// Products <b>[11]</b>', f_all:'All', f_live:'Live', f_beta:'Beta', f_dev:'In development',
+       products_label:'// Products <b>[13]</b>', f_all:'All', f_live:'Live', f_beta:'Beta', f_dev:'In development',
        cta_h:'Building something in media, finance — or anything else?',
        cta_p:"Payment flows, subscriptions, APIs, AI pipelines — we build almost anything, from the simple to the deeply technical. We partner with founders and domain experts who bring a bold idea and the conviction to see it through. No pitch deck required — just a business we believe in.",
        cta_btn:'Are we a fit?' },
@@ -436,7 +452,7 @@ const I18N = {
        hw1_t:'Du kommer med idéen', hw1_b:'Du bidrar med bransjekunnskap og distribusjon. Du trenger ikke være tekniker — du trenger å kjenne problemområdet bedre enn noen.',
        hw2_t:'Vi bygger produktet', hw2_b:'Design, utvikling og AI-integrasjon. Ingen timefakturaer, ingen scope creep. Et lite månedlig honorar (NOK 15–25k) dekker infrastruktur og direkte kostnader.',
        hw3_t:'Vi skalerer det sammen', hw3_b:'Eierandel opptjenes mot milepæler — typisk 20–35% til NordiTech. Du eier merkevaren, kundene og domenet. Vi eier oppsiden sammen.',
-       products_label:'// Produkter <b>[11]</b>', f_all:'Alle', f_live:'Live', f_beta:'Beta', f_dev:'Under utvikling',
+       products_label:'// Produkter <b>[13]</b>', f_all:'Alle', f_live:'Live', f_beta:'Beta', f_dev:'Under utvikling',
        cta_h:'Bygger du noe innen media, finans — eller noe helt annet?',
        cta_p:'Betalingsløsninger, abonnement, API-er, AI-pipelines — vi bygger nesten hva som helst, fra det enkle til det teknisk kompliserte. Vi går inn som partner med gründere og bransjeeksperter som har en modig idé og overbevisningen til å gjennomføre den. Ingen pitch-deck nødvendig — bare en forretningsidé vi har tro på.',
        cta_btn:'Passer vi sammen?' }
